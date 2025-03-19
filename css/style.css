@@ -722,35 +722,35 @@ a:hover {
   background-color: transparent;
   color:transparent !important;
 }
-.box-2:hover:hover {
+.box-2:hover{
   background-image: url('img/services/Diseño\ Interior.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-color: transparent;
   color:transparent !important;
 }
-.box-3:hover:hover {
+.box-3:hover{
   background-image: url('img/services/Diseño\ Urbano.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-color: transparent;
   color:transparent !important;
 }
-.box-4:hover:hover {
+.box-4:hover {
   background-image: url('img/services/Visualización\ Arquitectónica.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-color: transparent;
   color:transparent !important;
 }
-.box-5:hover:hover {
+.box-5:hover {
   background-image: url('img/services/Construcción.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-color: transparent;
   color:transparent !important;
 }
-.box-6:hover:hover {
+.box-6:hover {
   background-image: url("/landing-arq/img/services/Mobiliario.png");
   background-repeat: no-repeat;
   background-size: cover;
