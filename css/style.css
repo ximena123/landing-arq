@@ -716,42 +716,42 @@ a:hover {
 }
 
 .box-1:hover {
-  background-image: url('../../landing-arq/img/services/Visualización\ Arquitectónica.png');
+  background: url(../img/services/arq.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-color: transparent;
   color:transparent !important;
 }
 .box-2:hover{
-  background-image: url('img/services/Diseño\ Interior.png');
+  background: url(../img/services/int.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-color: transparent;
   color:transparent !important;
 }
 .box-3:hover{
-  background-image: url('img/services/Diseño\ Urbano.png');
+  background: url(../img/services/urb.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-color: transparent;
   color:transparent !important;
 }
 .box-4:hover {
-  background-image: url('img/services/Visualización\ Arquitectónica.png');
+  background: url(../img/services/viz.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-color: transparent;
   color:transparent !important;
 }
 .box-5:hover {
-  background-image: url('img/services/Construcción.jpg');
+  background: url(../img/services/const.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-color: transparent;
   color:transparent !important;
 }
 .box-6:hover {
-  background-image: url("/landing-arq/img/services/Mobiliario.png");
+  background: url(../img/services/mob.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-color: transparent;
