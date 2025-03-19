@@ -716,7 +716,7 @@ a:hover {
 }
 
 .box-1:hover {
-  background: url(img/services/Diseño\ Arquitectónico.png);
+  background-image: url('../img/services/Diseño\ Arquitectónico.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-color: transparent;
