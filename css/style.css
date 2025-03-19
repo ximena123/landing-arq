@@ -10,7 +10,7 @@
 ======================================*/
 @font-face {
   font-family: 'Eras Light';
-  src: url('../font/ITC.otf') format('truetype');
+  src: url('../font/ITC.otf') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
