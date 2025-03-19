@@ -751,7 +751,7 @@ a:hover {
   color:transparent !important;
 }
 .box-6:hover:hover {
-  background-image: url('img/services/Mobiliario.png');
+  background-image: url("/landing-arq/img/services/Mobiliario.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-color: transparent;
