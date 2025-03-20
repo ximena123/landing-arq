@@ -897,6 +897,14 @@ a:hover {
 
 .card-blog .card-body {
   position: relative;
+  padding: 1.25rem 1.25rem 0.25rem 1.25rem;
+}
+
+.card-blog .card-body span{
+  font-size: 14px;
+  color: #4E4D57;
+  display: flex;
+  justify-content: end;
 }
 
 .card-blog .card-category-box {
