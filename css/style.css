@@ -891,9 +891,6 @@ a:hover {
   line-height: 1.6;
 }
 
-/*======================================
-//--//-->   BLOG
-======================================*/
 
 .card-blog .card-body {
   position: relative;
@@ -1254,4 +1251,9 @@ footer .credits a {
     width: 100%;
     height: 100%;
   }
+
+}
+.counter-plus{
+  content: "+";
+
 }
