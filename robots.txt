@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://ximena123.github.io/landing-arq/sitemap.xml
+
+# Optimización para crawlers
+Crawl-delay: 1
+
+# Permitir acceso a recursos importantes
+Allow: /css/
+Allow: /js/
+Allow: /img/
+Allow: /lib/
