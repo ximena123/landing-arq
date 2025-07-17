@@ -25,6 +25,12 @@
   <link href="img/Logo-03.png" rel="icon" />
   <link href="img/Logo-03.png" rel="apple-touch-icon" />
 
+  <!-- Preload critical images -->
+  <link rel="preload" as="image" href="img/Logo-03.png">
+  <link rel="preload" as="image" href="img/banner-horizontal.png">
+  <link rel="preload" as="image" href="img/Centro Comunal Lumbaqui/Centro Comunal Lumbaqui 01.png">
+  <link rel="preload" as="image" href="img/4.png">
+
   <!-- Bootstrap CSS File -->
   <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -38,6 +44,9 @@
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
 
+  <!-- Image Optimization CSS -->
+  <link href="css/image-optimization.css" rel="stylesheet">
+
 </head>
 
 <body id="page-top">
@@ -45,7 +54,7 @@
   <!--/ Nav Star /-->
   <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll" href="#page-top"><img src="img/Logo-03.png" alt="" width="25" loading="lazy"></a>
+      <a class="navbar-brand js-scroll" href="#page-top"><img src="img/Logo-03.png" alt="" width="25"></a>
       <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
         aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span></span>
@@ -85,7 +94,7 @@
       <div class="table-cell">
         <div class="container mr-0">
           <!--<p class="display-6 color-d">Hello, world!</p>-->
-          <img src="img/Logo-03.png" alt="" width="250" loading="lazy">
+          <img src="img/Logo-03.png" alt="" width="250">
           <h1 class="intro-title mb-4">Paola Stefany Puchaicela</h1>
           <p class="intro-subtitle"><span class="text-center font-weight-bold">Architecture & Interior Design ,
               Architectural visualization</span></p>
@@ -429,6 +438,9 @@
   <script src="lib/typed/typed.min.js"></script>
   <!-- Contact Form JavaScript File -->
   <script src="contactform/contactform.js"></script>
+
+  <!-- Image Optimization Script -->
+  <script src="js/image-optimization.js"></script>
 
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>

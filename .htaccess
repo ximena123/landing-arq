@@ -15,18 +15,18 @@
 <IfModule mod_expires.c>
     ExpiresActive On
     
-    # Images - Cache for 1 year
-    ExpiresByType image/jpg "access plus 1 year"
-    ExpiresByType image/jpeg "access plus 1 year"
-    ExpiresByType image/gif "access plus 1 year"
-    ExpiresByType image/png "access plus 1 year"
-    ExpiresByType image/webp "access plus 1 year"
-    ExpiresByType image/svg+xml "access plus 1 year"
-    ExpiresByType image/x-icon "access plus 1 year"
-    ExpiresByType image/ico "access plus 1 year"
-    ExpiresByType image/icon "access plus 1 year"
-    ExpiresByType text/ico "access plus 1 year"
-    ExpiresByType application/ico "access plus 1 year"
+    # Images - Cache for 2 years (más agresivo)
+    ExpiresByType image/jpg "access plus 2 years"
+    ExpiresByType image/jpeg "access plus 2 years"
+    ExpiresByType image/gif "access plus 2 years"
+    ExpiresByType image/png "access plus 2 years"
+    ExpiresByType image/webp "access plus 2 years"
+    ExpiresByType image/svg+xml "access plus 2 years"
+    ExpiresByType image/x-icon "access plus 2 years"
+    ExpiresByType image/ico "access plus 2 years"
+    ExpiresByType image/icon "access plus 2 years"
+    ExpiresByType text/ico "access plus 2 years"
+    ExpiresByType application/ico "access plus 2 years"
     
     # CSS and JavaScript - Cache for 1 month
     ExpiresByType text/css "access plus 1 month"
@@ -51,9 +51,10 @@
 
 # Alternative method using Cache-Control headers
 <IfModule mod_headers.c>
-    # Images - Cache for 1 year
+    # Images - Cache for 2 years (más agresivo)
     <FilesMatch "\.(jpg|jpeg|png|gif|webp|svg|ico)$">
-        Header set Cache-Control "max-age=31536000, public, immutable"
+        Header set Cache-Control "max-age=63072000, public, immutable"
+        Header set Vary "Accept-Encoding"
     </FilesMatch>
     
     # CSS and JavaScript - Cache for 1 month
