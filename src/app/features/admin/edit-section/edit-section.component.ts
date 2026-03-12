@@ -3,11 +3,12 @@ import { ActivatedRoute } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { ContentService } from '../../../core/services/content.service';
 import { SiteContent } from '../../../core/models/content.model';
+import { ImageUploaderComponent } from '../../../shared/components/image-uploader/image-uploader.component';
 
 @Component({
   selector: 'app-edit-section',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, ImageUploaderComponent],
   templateUrl: './edit-section.component.html',
   styleUrl: './edit-section.component.scss'
 })
@@ -19,6 +20,10 @@ export class EditSectionComponent implements OnInit {
   sectionTitle = '';
   saved = signal(false);
   editData: any = null;
+
+  private imageFields = new Set([
+    'image', 'backgroundImage', 'logo', 'thumbnail'
+  ]);
 
   private sectionTitles: Record<string, string> = {
     hero: 'Hero / Inicio',
@@ -71,6 +76,18 @@ export class EditSectionComponent implements OnInit {
     return Array.isArray(this.editData);
   }
 
+  isImageField(key: string): boolean {
+    return this.imageFields.has(key);
+  }
+
+  onImageChanged(key: string, newValue: string, item?: any): void {
+    if (item) {
+      item[key] = newValue;
+    } else {
+      this.editData[key] = newValue;
+    }
+  }
+
   addItem(): void {
     if (!Array.isArray(this.editData)) return;
     const template = this.editData[0];
@@ -108,34 +125,16 @@ export class EditSectionComponent implements OnInit {
 
   getFieldLabel(key: string): string {
     const labels: Record<string, string> = {
-      title: 'Título',
-      subtitle: 'Subtítulo',
-      description: 'Descripción',
-      text: 'Texto',
-      name: 'Nombre',
-      image: 'Imagen',
-      backgroundImage: 'Imagen de Fondo',
-      icon: 'Icono',
-      logo: 'Logo',
-      value: 'Valor',
-      prefix: 'Prefijo',
-      label: 'Etiqueta',
-      category: 'Categoría',
-      link: 'Enlace',
-      url: 'URL',
-      location: 'Ubicación',
-      phone: 'Teléfono',
-      email: 'Email',
-      instagram: 'Instagram',
-      instagramUrl: 'URL Instagram',
-      linkedin: 'LinkedIn',
-      linkedinUrl: 'URL LinkedIn',
-      tagline: 'Eslogan',
-      highlightText: 'Texto Destacado',
-      year: 'Año',
-      thumbnail: 'Miniatura',
-      cols: 'Columnas',
-      alt: 'Texto Alt'
+      title: 'Título', subtitle: 'Subtítulo', description: 'Descripción',
+      text: 'Texto', name: 'Nombre', image: 'Imagen',
+      backgroundImage: 'Imagen de Fondo', icon: 'Icono', logo: 'Logo',
+      value: 'Valor', prefix: 'Prefijo', label: 'Etiqueta',
+      category: 'Categoría', link: 'Enlace', url: 'URL',
+      location: 'Ubicación', phone: 'Teléfono', email: 'Email',
+      instagram: 'Instagram', instagramUrl: 'URL Instagram',
+      linkedin: 'LinkedIn', linkedinUrl: 'URL LinkedIn',
+      tagline: 'Eslogan', highlightText: 'Texto Destacado',
+      year: 'Año', thumbnail: 'Miniatura', cols: 'Columnas', alt: 'Texto Alt'
     };
     return labels[key] || key;
   }

@@ -21,7 +21,7 @@
         @for (image of p.images; track image.url) {
           <div [class]="getColClass(image.cols)">
             <div class="gallery-item" (click)="openLightbox(image.url)">
-              <img [src]="image.url" [alt]="image.alt" loading="lazy" />
+              <app-img [src]="image.url" [alt]="image.alt" />
               <div class="gallery-overlay">
                 <i class="fa-solid fa-expand"></i>
               </div>

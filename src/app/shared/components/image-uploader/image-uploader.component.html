@@ -1,0 +1,39 @@
+<div class="uploader-wrapper">
+  @if (previewUrl()) {
+    <div class="preview-container">
+      <img [src]="previewUrl()" alt="Preview" class="preview-img" />
+      <div class="preview-actions">
+        <label class="btn-change" title="Cambiar imagen">
+          <i class="fa-solid fa-pen"></i>
+          <input type="file" accept="image/*" (change)="onFileSelected($event)" hidden />
+        </label>
+        <button class="btn-delete" (click)="removeImage()" title="Eliminar imagen">
+          <i class="fa-solid fa-trash-can"></i>
+        </button>
+      </div>
+    </div>
+  } @else {
+    <div
+      class="drop-zone"
+      [class.drag-over]="isDragOver()"
+      [class.uploading]="isUploading()"
+      (dragover)="onDragOver($event)"
+      (dragleave)="onDragLeave()"
+      (drop)="onDrop($event)"
+    >
+      @if (isUploading()) {
+        <div class="upload-spinner"></div>
+        <p>Subiendo imagen...</p>
+      } @else {
+        <i class="fa-solid fa-cloud-arrow-up upload-icon"></i>
+        <p class="drop-text">Arrastra una imagen aquí</p>
+        <span class="drop-or">o</span>
+        <label class="btn-browse">
+          Seleccionar archivo
+          <input type="file" accept="image/*" (change)="onFileSelected($event)" hidden />
+        </label>
+        <span class="drop-hint">PNG, JPG, WEBP hasta 10MB</span>
+      }
+    </div>
+  }
+</div>

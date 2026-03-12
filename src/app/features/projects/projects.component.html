@@ -14,7 +14,7 @@
           <div class="col-lg-4 col-md-6">
             <a [routerLink]="['/proyecto', project.id]" class="project-card">
               <div class="card-image">
-                <img [src]="project.thumbnail" [alt]="project.title" loading="lazy" />
+                <app-img [src]="project.thumbnail" [alt]="project.title" />
                 <div class="card-overlay">
                   <span class="view-btn">Ver Proyecto</span>
                 </div>

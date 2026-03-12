@@ -22,9 +22,6 @@
       <div class="project-header" (click)="toggleProject(project.id)">
         <div class="project-info">
           <span class="project-index">#{{ i + 1 }}</span>
-          @if (project.thumbnail) {
-            <img [src]="project.thumbnail" alt="" class="project-thumb" />
-          }
           <div>
             <strong>{{ project.title }}</strong>
             <span class="project-year">{{ project.year }}</span>
@@ -54,10 +51,14 @@
               <label>Año</label>
               <input type="text" [(ngModel)]="project.year" [name]="'pyear_' + i" />
             </div>
-            <div class="field-group">
-              <label>Miniatura (URL)</label>
-              <input type="text" [(ngModel)]="project.thumbnail" [name]="'pthumb_' + i" />
-            </div>
+          </div>
+
+          <div class="field-group">
+            <label>Miniatura</label>
+            <app-image-uploader
+              [currentValue]="project.thumbnail"
+              (imageChanged)="project.thumbnail = $event"
+            />
           </div>
 
           <div class="field-group">
@@ -76,13 +77,11 @@
             <div class="images-grid">
               @for (image of project.images; track trackByIndex($index); let j = $index) {
                 <div class="image-card">
-                  @if (image.url) {
-                    <div class="img-preview">
-                      <img [src]="image.url" [alt]="image.alt" />
-                    </div>
-                  }
+                  <app-image-uploader
+                    [currentValue]="image.url"
+                    (imageChanged)="image.url = $event"
+                  />
                   <div class="img-fields">
-                    <input type="text" [(ngModel)]="image.url" [name]="'iurl_' + i + '_' + j" placeholder="URL de imagen" />
                     <input type="text" [(ngModel)]="image.alt" [name]="'ialt_' + i + '_' + j" placeholder="Texto alternativo" />
                     <div class="img-row">
                       <div class="field-inline">

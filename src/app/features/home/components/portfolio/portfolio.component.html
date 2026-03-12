@@ -9,7 +9,7 @@
         @for (item of c.portfolio; track item.id) {
           <div class="col-md-6">
             <a [routerLink]="['/proyecto', item.link]" class="portfolio-card">
-              <img [src]="item.image" [alt]="item.title" loading="lazy" />
+              <app-img [src]="item.image" [alt]="item.title" />
               <div class="portfolio-overlay">
                 <span class="portfolio-category">{{ item.category }}</span>
                 <h3 class="portfolio-title">{{ item.title }}</h3>

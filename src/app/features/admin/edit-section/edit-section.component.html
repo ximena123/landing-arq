@@ -35,17 +35,17 @@
               @if (key !== 'images') {
                 <div class="field-group">
                   <label>{{ getFieldLabel(key) }}</label>
-                  @if (getFieldType(item[key]) === 'textarea') {
+                  @if (isImageField(key)) {
+                    <app-image-uploader
+                      [currentValue]="item[key]"
+                      (imageChanged)="onImageChanged(key, $event, item)"
+                    />
+                  } @else if (getFieldType(item[key]) === 'textarea') {
                     <textarea [(ngModel)]="item[key]" [name]="'field_' + i + '_' + key" rows="4"></textarea>
                   } @else if (getFieldType(item[key]) === 'number') {
                     <input type="number" [(ngModel)]="item[key]" [name]="'field_' + i + '_' + key" />
                   } @else {
                     <input type="text" [(ngModel)]="item[key]" [name]="'field_' + i + '_' + key" />
-                  }
-                  @if (key === 'image' || key === 'backgroundImage' || key === 'thumbnail') {
-                    <div class="image-preview">
-                      <img [src]="item[key]" [alt]="'Preview'" />
-                    </div>
                   }
                 </div>
               }
@@ -59,17 +59,17 @@
           @for (key of getObjectKeys(editData); track key) {
             <div class="field-group">
               <label>{{ getFieldLabel(key) }}</label>
-              @if (getFieldType(editData[key]) === 'textarea') {
+              @if (isImageField(key)) {
+                <app-image-uploader
+                  [currentValue]="editData[key]"
+                  (imageChanged)="onImageChanged(key, $event)"
+                />
+              } @else if (getFieldType(editData[key]) === 'textarea') {
                 <textarea [(ngModel)]="editData[key]" [name]="'field_' + key" rows="4"></textarea>
               } @else if (getFieldType(editData[key]) === 'number') {
                 <input type="number" [(ngModel)]="editData[key]" [name]="'field_' + key" />
               } @else {
                 <input type="text" [(ngModel)]="editData[key]" [name]="'field_' + key" />
-              }
-              @if (key === 'image' || key === 'backgroundImage' || key === 'logo') {
-                <div class="image-preview">
-                  <img [src]="editData[key]" [alt]="'Preview'" />
-                </div>
               }
             </div>
           }

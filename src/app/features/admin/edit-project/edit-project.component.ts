@@ -2,11 +2,12 @@ import { Component, inject, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ContentService } from '../../../core/services/content.service';
 import { ProjectDetail, ProjectImage } from '../../../core/models/content.model';
+import { ImageUploaderComponent } from '../../../shared/components/image-uploader/image-uploader.component';
 
 @Component({
   selector: 'app-edit-projects',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, ImageUploaderComponent],
   templateUrl: './edit-project.component.html',
   styleUrl: './edit-project.component.scss'
 })
