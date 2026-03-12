@@ -100,6 +100,29 @@ export class ImageStorageService {
     });
   }
 
+  async getAllImagesFull(): Promise<{ id: string; name: string; type: string; data: ArrayBuffer }[]> {
+    await this.init();
+
+    return new Promise((resolve, reject) => {
+      const tx = this.db!.transaction(STORE_NAME, 'readonly');
+      const store = tx.objectStore(STORE_NAME);
+      const request = store.getAll();
+
+      request.onsuccess = () => {
+        resolve(
+          request.result.map((r: any) => ({
+            id: r.id,
+            name: r.name,
+            type: r.type,
+            data: r.data
+          }))
+        );
+      };
+
+      request.onerror = () => reject(request.error);
+    });
+  }
+
   async deleteImage(id: string): Promise<void> {
     await this.init();
 

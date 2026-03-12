@@ -17,20 +17,25 @@
     </nav>
 
     <div class="sidebar-actions">
-      <button class="action-btn export" (click)="exportContent()">
-        <i class="fa-solid fa-download"></i>
-        <span>Exportar</span>
+      <button class="action-btn export highlight" (click)="exportContent()" [disabled]="isExporting()">
+        @if (isExporting()) {
+          <i class="fa-solid fa-spinner fa-spin"></i>
+          <span>Exportando...</span>
+        } @else {
+          <i class="fa-solid fa-rocket"></i>
+          <span>Exportar para Desplegar</span>
+        }
       </button>
 
       <label class="action-btn import">
         <i class="fa-solid fa-upload"></i>
-        <span>Importar</span>
+        <span>Importar JSON</span>
         <input type="file" accept=".json" (change)="importContent($event)" hidden />
       </label>
 
       <button class="action-btn reset" (click)="resetContent()">
         <i class="fa-solid fa-rotate-left"></i>
-        <span>Restaurar</span>
+        <span>Restaurar Original</span>
       </button>
 
       <button class="action-btn logout" (click)="logout()">

@@ -121,6 +121,17 @@
     background: rgba(255, 255, 255, 0.08);
   }
 
+  &.highlight {
+    background: rgba(201, 169, 110, 0.2);
+    color: #c9a96e;
+    font-weight: 600;
+
+    &:hover {
+      background: rgba(201, 169, 110, 0.35);
+      color: #fff;
+    }
+  }
+
   &.logout:hover {
     color: #ff6b6b;
   }

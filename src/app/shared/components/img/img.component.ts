@@ -1,9 +1,10 @@
-import { Component, inject, input, signal, effect } from '@angular/core';
+import { Component, inject, input, signal, effect, ViewEncapsulation } from '@angular/core';
 import { ImageStorageService } from '../../../core/services/image-storage.service';
 
 @Component({
   selector: 'app-img',
   standalone: true,
+  encapsulation: ViewEncapsulation.None,
   template: `
     <img
       [src]="resolvedUrl()"
@@ -13,8 +14,7 @@ import { ImageStorageService } from '../../../core/services/image-storage.servic
     />
   `,
   styles: [`
-    :host { display: contents; }
-    img { max-width: 100%; height: auto; }
+    app-img { display: contents; }
   `]
 })
 export class ImgComponent {
