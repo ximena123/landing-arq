@@ -1,0 +1,29 @@
+@if (content(); as c) {
+  <section id="portfolio" class="portfolio-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Portafolio</h2>
+        <div class="title-divider"></div>
+      </div>
+      <div class="row g-4">
+        @for (item of c.portfolio; track item.id) {
+          <div class="col-md-6">
+            <a [routerLink]="['/proyecto', item.link]" class="portfolio-card">
+              <img [src]="item.image" [alt]="item.title" loading="lazy" />
+              <div class="portfolio-overlay">
+                <span class="portfolio-category">{{ item.category }}</span>
+                <h3 class="portfolio-title">{{ item.title }}</h3>
+              </div>
+            </a>
+          </div>
+        }
+      </div>
+      <div class="text-center mt-4">
+        <a routerLink="/proyectos" class="btn-view-all">
+          Ver Todos los Proyectos
+          <i class="fa-solid fa-arrow-right ms-2"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+}

@@ -1,0 +1,13 @@
+@if (content(); as c) {
+  <section id="hero" class="hero-section" [style.background-image]="'url(' + c.hero.backgroundImage + ')'">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <img [src]="c.hero.logo" [alt]="c.hero.title" class="hero-logo" />
+      <h1 class="hero-title">{{ c.hero.title }}</h1>
+      <p class="hero-subtitle">{{ c.hero.subtitle }}</p>
+      <button class="hero-btn" (click)="scrollToAbout()">
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+    </div>
+  </section>
+}

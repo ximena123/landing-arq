@@ -1,0 +1,80 @@
+<div class="edit-section">
+  <div class="section-header">
+    <h3>{{ sectionTitle }}</h3>
+    <div class="header-actions">
+      @if (isArray()) {
+        <button class="btn-add" (click)="addItem()">
+          <i class="fa-solid fa-plus"></i> Agregar
+        </button>
+      }
+      <button class="btn-save" (click)="save()">
+        <i class="fa-solid fa-floppy-disk"></i> Guardar
+      </button>
+    </div>
+  </div>
+
+  @if (saved()) {
+    <div class="saved-msg">
+      <i class="fa-solid fa-check-circle"></i> Cambios guardados correctamente
+    </div>
+  }
+
+  @if (editData) {
+    @if (isArray()) {
+      @for (item of editData; track trackByIndex($index); let i = $index) {
+        <div class="edit-card">
+          <div class="card-header">
+            <span class="card-index">#{{ i + 1 }}</span>
+            <span class="card-title">{{ item.title || item.name || 'Elemento ' + (i + 1) }}</span>
+            <button class="btn-remove" (click)="removeItem(i)" title="Eliminar">
+              <i class="fa-solid fa-trash-can"></i>
+            </button>
+          </div>
+          <div class="card-body">
+            @for (key of getObjectKeys(item); track key) {
+              @if (key !== 'images') {
+                <div class="field-group">
+                  <label>{{ getFieldLabel(key) }}</label>
+                  @if (getFieldType(item[key]) === 'textarea') {
+                    <textarea [(ngModel)]="item[key]" [name]="'field_' + i + '_' + key" rows="4"></textarea>
+                  } @else if (getFieldType(item[key]) === 'number') {
+                    <input type="number" [(ngModel)]="item[key]" [name]="'field_' + i + '_' + key" />
+                  } @else {
+                    <input type="text" [(ngModel)]="item[key]" [name]="'field_' + i + '_' + key" />
+                  }
+                  @if (key === 'image' || key === 'backgroundImage' || key === 'thumbnail') {
+                    <div class="image-preview">
+                      <img [src]="item[key]" [alt]="'Preview'" />
+                    </div>
+                  }
+                </div>
+              }
+            }
+          </div>
+        </div>
+      }
+    } @else {
+      <div class="edit-card">
+        <div class="card-body">
+          @for (key of getObjectKeys(editData); track key) {
+            <div class="field-group">
+              <label>{{ getFieldLabel(key) }}</label>
+              @if (getFieldType(editData[key]) === 'textarea') {
+                <textarea [(ngModel)]="editData[key]" [name]="'field_' + key" rows="4"></textarea>
+              } @else if (getFieldType(editData[key]) === 'number') {
+                <input type="number" [(ngModel)]="editData[key]" [name]="'field_' + key" />
+              } @else {
+                <input type="text" [(ngModel)]="editData[key]" [name]="'field_' + key" />
+              }
+              @if (key === 'image' || key === 'backgroundImage' || key === 'logo') {
+                <div class="image-preview">
+                  <img [src]="editData[key]" [alt]="'Preview'" />
+                </div>
+              }
+            </div>
+          }
+        </div>
+      </div>
+    }
+  }
+</div>

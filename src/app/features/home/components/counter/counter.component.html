@@ -1,0 +1,22 @@
+@if (content(); as c) {
+  <section class="counter-section" style="background-image: url('img/counters-bg.jpg')">
+    <div class="counter-overlay"></div>
+    <div class="container position-relative" style="z-index: 2">
+      <div class="row g-4">
+        @for (counter of c.counters; track counter.id) {
+          <div class="col-lg-3 col-md-6 col-6">
+            <div class="counter-item">
+              <div class="counter-icon">
+                <i class="fa-solid {{ counter.icon }}"></i>
+              </div>
+              <span class="counter-value">
+                {{ counter.prefix }}{{ getAnimatedValue(counter.id, counter.value) }}
+              </span>
+              <span class="counter-label">{{ counter.label }}</span>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+}

@@ -1,0 +1,62 @@
+<div class="admin-layout" [class.sidebar-collapsed]="!sidebarOpen()">
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <h3>Admin Panel</h3>
+      <button class="toggle-btn" (click)="toggleSidebar()">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+
+    <nav class="sidebar-nav">
+      @for (section of sections; track section.id) {
+        <a [routerLink]="section.route" routerLinkActive="active" class="nav-item">
+          <i class="fa-solid {{ section.icon }}"></i>
+          <span>{{ section.label }}</span>
+        </a>
+      }
+    </nav>
+
+    <div class="sidebar-actions">
+      <button class="action-btn export" (click)="exportContent()">
+        <i class="fa-solid fa-download"></i>
+        <span>Exportar</span>
+      </button>
+
+      <label class="action-btn import">
+        <i class="fa-solid fa-upload"></i>
+        <span>Importar</span>
+        <input type="file" accept=".json" (change)="importContent($event)" hidden />
+      </label>
+
+      <button class="action-btn reset" (click)="resetContent()">
+        <i class="fa-solid fa-rotate-left"></i>
+        <span>Restaurar</span>
+      </button>
+
+      <button class="action-btn logout" (click)="logout()">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        <span>Salir</span>
+      </button>
+    </div>
+  </aside>
+
+  <main class="admin-content">
+    <div class="content-header">
+      <button class="mobile-toggle" (click)="toggleSidebar()">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <h2>Gestión de Contenido</h2>
+      <a routerLink="/" target="_blank" class="preview-link">
+        <i class="fa-solid fa-external-link-alt"></i> Ver Sitio
+      </a>
+    </div>
+
+    @if (exportMessage()) {
+      <div class="toast-message">{{ exportMessage() }}</div>
+    }
+
+    <div class="content-body">
+      <router-outlet />
+    </div>
+  </main>
+</div>

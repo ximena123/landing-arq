@@ -1,0 +1,105 @@
+<div class="edit-projects">
+  <div class="section-header">
+    <h3>Gestión de Proyectos</h3>
+    <div class="header-actions">
+      <button class="btn-add" (click)="addProject()">
+        <i class="fa-solid fa-plus"></i> Nuevo Proyecto
+      </button>
+      <button class="btn-save" (click)="save()">
+        <i class="fa-solid fa-floppy-disk"></i> Guardar Todo
+      </button>
+    </div>
+  </div>
+
+  @if (saved()) {
+    <div class="saved-msg">
+      <i class="fa-solid fa-check-circle"></i> Proyectos guardados correctamente
+    </div>
+  }
+
+  @for (project of projects; track trackByIndex($index); let i = $index) {
+    <div class="project-card" [class.expanded]="expandedProject() === project.id">
+      <div class="project-header" (click)="toggleProject(project.id)">
+        <div class="project-info">
+          <span class="project-index">#{{ i + 1 }}</span>
+          @if (project.thumbnail) {
+            <img [src]="project.thumbnail" alt="" class="project-thumb" />
+          }
+          <div>
+            <strong>{{ project.title }}</strong>
+            <span class="project-year">{{ project.year }}</span>
+          </div>
+        </div>
+        <div class="project-actions">
+          <span class="image-count">{{ project.images.length }} imágenes</span>
+          <button class="btn-remove" (click)="removeProject(i); $event.stopPropagation()">
+            <i class="fa-solid fa-trash-can"></i>
+          </button>
+          <i class="fa-solid fa-chevron-down expand-icon"></i>
+        </div>
+      </div>
+
+      @if (expandedProject() === project.id) {
+        <div class="project-body">
+          <div class="fields-grid">
+            <div class="field-group">
+              <label>ID (URL slug)</label>
+              <input type="text" [(ngModel)]="project.id" [name]="'pid_' + i" />
+            </div>
+            <div class="field-group">
+              <label>Título</label>
+              <input type="text" [(ngModel)]="project.title" [name]="'ptitle_' + i" />
+            </div>
+            <div class="field-group">
+              <label>Año</label>
+              <input type="text" [(ngModel)]="project.year" [name]="'pyear_' + i" />
+            </div>
+            <div class="field-group">
+              <label>Miniatura (URL)</label>
+              <input type="text" [(ngModel)]="project.thumbnail" [name]="'pthumb_' + i" />
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label>Descripción</label>
+            <textarea [(ngModel)]="project.description" [name]="'pdesc_' + i" rows="3"></textarea>
+          </div>
+
+          <div class="images-section">
+            <div class="images-header">
+              <h4>Imágenes del Proyecto</h4>
+              <button class="btn-add-sm" (click)="addImage(project)">
+                <i class="fa-solid fa-plus"></i> Agregar Imagen
+              </button>
+            </div>
+
+            <div class="images-grid">
+              @for (image of project.images; track trackByIndex($index); let j = $index) {
+                <div class="image-card">
+                  @if (image.url) {
+                    <div class="img-preview">
+                      <img [src]="image.url" [alt]="image.alt" />
+                    </div>
+                  }
+                  <div class="img-fields">
+                    <input type="text" [(ngModel)]="image.url" [name]="'iurl_' + i + '_' + j" placeholder="URL de imagen" />
+                    <input type="text" [(ngModel)]="image.alt" [name]="'ialt_' + i + '_' + j" placeholder="Texto alternativo" />
+                    <div class="img-row">
+                      <div class="field-inline">
+                        <label>Columnas (1-12)</label>
+                        <input type="number" [(ngModel)]="image.cols" [name]="'icol_' + i + '_' + j" min="1" max="12" />
+                      </div>
+                      <button class="btn-remove-sm" (click)="removeImage(project, j)">
+                        <i class="fa-solid fa-trash-can"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              }
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  }
+</div>

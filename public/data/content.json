@@ -1,0 +1,193 @@
+{
+  "hero": {
+    "logo": "img/Logo-03.png",
+    "title": "Paola Stefany Puchaicela",
+    "subtitle": "Architecture & Interior Design, Architectural visualization",
+    "backgroundImage": "img/banner-horizontal.png"
+  },
+  "about": {
+    "title": "Acerca de Mi",
+    "description": "Soy una apasionada de la arquitectura e interiorismo. Me dedico a crear espacios que no solo sean estéticamente impactantes, sino también funcionales y armoniosos. Con experiencia en diseño interior, arquitectónico, y visualización arquitectónica, transformo ideas en ambientes que reflejan la personalidad y necesidades de cada cliente. Mi enfoque combina creatividad, atención al detalle y un profundo conocimiento de materiales y tendencias, para ofrecer soluciones que van más allá de lo convencional. Trabajo a nivel mundial buscando dar lo mejor de mí en cada trabajo, cuento con el respaldo de un equipo de profesionales: ingenieros, residentes de obra, y especialistas en diversas áreas.",
+    "highlightText": "\"Si imaginas un espacio único, puedo hacerlo posible.\""
+  },
+  "services": [
+    {
+      "id": "arq",
+      "icon": "fa-drafting-compass",
+      "title": "Diseño Arquitectónico",
+      "description": "Proyectos arquitectónicos funcionales y estéticos adaptados a sus necesidades. Diseños que combinan innovación y funcionalidad para crear espacios únicos.",
+      "backgroundImage": "img/arq.png"
+    },
+    {
+      "id": "int",
+      "icon": "fa-couch",
+      "title": "Diseño Interior",
+      "description": "Espacios interiores equilibrados y personalizados. Optimizamos cada rincón para lograr confort, estética y funcionalidad en perfecta armonía.",
+      "backgroundImage": "img/int.png"
+    },
+    {
+      "id": "urb",
+      "icon": "fa-city",
+      "title": "Diseño Urbano",
+      "description": "Soluciones urbanas innovadoras que mejoran la calidad de vida. Diseños sostenibles que transforman el entorno y potencian la comunidad.",
+      "backgroundImage": "img/urb.png"
+    },
+    {
+      "id": "viz",
+      "icon": "fa-cube",
+      "title": "Visualización Arquitectónica",
+      "description": "Imágenes 3D realistas y recorridos virtuales. Visualice su proyecto con previsualizaciones detalladas antes de la construcción.",
+      "backgroundImage": "img/viz.png"
+    },
+    {
+      "id": "const",
+      "icon": "fa-hard-hat",
+      "title": "Construcción",
+      "description": "Ejecución de obras con los más altos estándares de calidad. Llevamos su proyecto del papel a la realidad con eficiencia y precisión.",
+      "backgroundImage": "img/const.jpg"
+    },
+    {
+      "id": "mob",
+      "icon": "fa-chair",
+      "title": "Mobiliario",
+      "description": "Diseño y fabricación de mobiliario personalizado. Piezas únicas adaptadas a cada espacio y estilo de vida.",
+      "backgroundImage": "img/mob.png"
+    }
+  ],
+  "counters": [
+    { "id": "c1", "value": 60, "prefix": "", "label": "Trabajos Completados", "icon": "fa-briefcase" },
+    { "id": "c2", "value": 5, "prefix": "", "label": "Años de Experiencia", "icon": "fa-calendar-alt" },
+    { "id": "c3", "value": 20, "prefix": "+", "label": "Total de Clientes", "icon": "fa-users" },
+    { "id": "c4", "value": 6, "prefix": "", "label": "Premios Ganados", "icon": "fa-trophy" }
+  ],
+  "portfolio": [
+    {
+      "id": "p1",
+      "title": "Diseño Interior Casa Centro",
+      "category": "Diseño",
+      "image": "img/Casa Centro/Comedor.png",
+      "link": "casa-centro"
+    },
+    {
+      "id": "p2",
+      "title": "Visualización Arquitectónica Casa Eda",
+      "category": "Visualización Arquitectónica",
+      "image": "img/Casa Eda/F1.png",
+      "link": "casa-eda"
+    }
+  ],
+  "testimonials": [
+    {
+      "id": "t1",
+      "name": "Diana Puchaicela",
+      "text": "Trabajar con Paola Stefany Puchaicela fue una experiencia excepcional. Su habilidad para transformar ideas en diseños innovadores y funcionales es impresionante. Cada detalle fue cuidadosamente pensado, y el resultado superó nuestras expectativas. ¡Altamente recomendada!",
+      "image": "img/testimonial-2.jpg"
+    },
+    {
+      "id": "t2",
+      "name": "Sr. Eda",
+      "text": "Estamos encantados con el trabajo. La puntualidad en la entrega y la atención meticulosa a cada detalle fueron sobresalientes. Se nos entregó planos detallados de cada espacio y supervisión durante la fase de construcción. Sin duda, volveríamos a confiar en su talento para futuros proyectos.",
+      "image": "img/testimonial-4.jpg"
+    }
+  ],
+  "currentProject": {
+    "title": "Proyecto en Curso",
+    "subtitle": "Proyecto Residencial",
+    "description": "Actualmente, estoy trabajando en un emocionante proyecto residencial que busca fusionar el diseño minimalista con la naturaleza. Esta residencia está siendo diseñada con un enfoque en la simplicidad y el confort, utilizando materiales naturales como piedra y madera para crear un ambiente cálido y acogedor. Los tonos neutros predominan en la paleta de colores, permitiendo que los elementos naturales se conviertan en los protagonistas del espacio. Con amplios ventanales y una iluminación cálida, la casa está pensada para integrarse con su entorno, ofreciendo vistas panorámicas y una conexión directa con el exterior. La piscina central se convierte en un elemento clave del diseño, proporcionando un punto focal que une los diferentes espacios de la vivienda.",
+    "image": "img/proyecto-curso.jpg"
+  },
+  "contact": {
+    "location": "ECUADOR",
+    "phone": "+593 990198732",
+    "email": "paolastefanypuchaicela@gmail.com",
+    "instagram": "@paopuchaicela.3d",
+    "instagramUrl": "https://www.instagram.com/paopuchaicela.3d/",
+    "linkedin": "Paola Stefany Puchaicela",
+    "linkedinUrl": "https://www.linkedin.com/in/paola-stefany-puchaicela-b44b47233/",
+    "tagline": "Diseñamos espacios que trascienden en el tiempo"
+  },
+  "projects": [
+    {
+      "id": "consultorio-uio",
+      "title": "Consultorio Dental UIO",
+      "year": "2022",
+      "thumbnail": "img/Consultorio Dental UIO/1F1.png",
+      "description": "Diseño de consultorio dental en Quito con distribución optimizada por pisos.",
+      "images": [
+        { "url": "img/Consultorio Dental UIO/1F1.png", "alt": "Planta 1", "cols": 4 },
+        { "url": "img/Consultorio Dental UIO/2F1.png", "alt": "Planta 2", "cols": 4 },
+        { "url": "img/Consultorio Dental UIO/3F1.png", "alt": "Planta 3", "cols": 4 }
+      ]
+    },
+    {
+      "id": "casa-centro",
+      "title": "Casa Centro",
+      "year": "2022",
+      "thumbnail": "img/Casa Centro/Comedor.png",
+      "description": "Diseño interior completo de residencia en el centro de la ciudad.",
+      "images": [
+        { "url": "img/Casa Centro/10.png", "alt": "Vista general", "cols": 4 },
+        { "url": "img/Casa Centro/Cocina 2 01.png", "alt": "Cocina", "cols": 4 },
+        { "url": "img/Casa Centro/Comedor.png", "alt": "Comedor", "cols": 4 },
+        { "url": "img/Casa Centro/Dormitorio Karen A.png", "alt": "Dormitorio A", "cols": 8 },
+        { "url": "img/Casa Centro/Dormitorio Karen B.png", "alt": "Dormitorio B", "cols": 4 },
+        { "url": "img/Casa Centro/Dormitorio Karen C 2.png", "alt": "Dormitorio C", "cols": 4 },
+        { "url": "img/Casa Centro/Vestidor Karen C.png", "alt": "Vestidor C", "cols": 4 },
+        { "url": "img/Casa Centro/Vestidor Master B.png", "alt": "Vestidor Master", "cols": 4 }
+      ]
+    },
+    {
+      "id": "centro-comunal-lumbaqui",
+      "title": "Centro Comunal Lumbaqui",
+      "year": "2023",
+      "thumbnail": "img/Centro Comunal Lumbaqui/1.png",
+      "description": "Diseño arquitectónico de centro comunal para la comunidad de Lumbaqui.",
+      "images": [
+        { "url": "img/Centro Comunal Lumbaqui/1.png", "alt": "Vista 1", "cols": 4 },
+        { "url": "img/Centro Comunal Lumbaqui/2.png", "alt": "Vista 2", "cols": 4 },
+        { "url": "img/Centro Comunal Lumbaqui/3.png", "alt": "Vista 3", "cols": 4 },
+        { "url": "img/Centro Comunal Lumbaqui/5.png", "alt": "Vista 5", "cols": 6 },
+        { "url": "img/Centro Comunal Lumbaqui/6.png", "alt": "Vista 6", "cols": 6 },
+        { "url": "img/Centro Comunal Lumbaqui/7.png", "alt": "Vista 7", "cols": 4 },
+        { "url": "img/Centro Comunal Lumbaqui/8.png", "alt": "Vista 8", "cols": 4 },
+        { "url": "img/Centro Comunal Lumbaqui/9.png", "alt": "Vista 9", "cols": 4 }
+      ]
+    },
+    {
+      "id": "casa-eda",
+      "title": "Casa Eda",
+      "year": "2024",
+      "thumbnail": "img/Casa Eda/F1.png",
+      "description": "Visualización arquitectónica completa de residencia moderna.",
+      "images": [
+        { "url": "img/Casa Eda/F1.png", "alt": "Fachada 1", "cols": 4 },
+        { "url": "img/Casa Eda/F13.png", "alt": "Fachada 13", "cols": 4 },
+        { "url": "img/Casa Eda/F2.png", "alt": "Fachada 2", "cols": 4 },
+        { "url": "img/Casa Eda/F3.png", "alt": "Interior 3", "cols": 4 },
+        { "url": "img/Casa Eda/F4.png", "alt": "Interior 4", "cols": 4 },
+        { "url": "img/Casa Eda/F5.png", "alt": "Interior 5", "cols": 4 },
+        { "url": "img/Casa Eda/F7.png", "alt": "Interior 7", "cols": 4 },
+        { "url": "img/Casa Eda/F8.png", "alt": "Interior 8", "cols": 4 },
+        { "url": "img/Casa Eda/F9.png", "alt": "Interior 9", "cols": 4 }
+      ]
+    },
+    {
+      "id": "quinta-primavera",
+      "title": "Hostería Quinta Primavera",
+      "year": "2024-2025",
+      "thumbnail": "img/Hostería Quinta Primavera/1.png",
+      "description": "Diseño de hostería con enfoque en hospitalidad y naturaleza.",
+      "images": [
+        { "url": "img/Hostería Quinta Primavera/1.png", "alt": "Vista 1", "cols": 4 },
+        { "url": "img/Hostería Quinta Primavera/2.png", "alt": "Vista 2", "cols": 4 },
+        { "url": "img/Hostería Quinta Primavera/4.png", "alt": "Vista 4", "cols": 4 },
+        { "url": "img/Hostería Quinta Primavera/A(1).png", "alt": "Área A", "cols": 6 },
+        { "url": "img/Hostería Quinta Primavera/A.png", "alt": "Área A alt", "cols": 6 },
+        { "url": "img/Hostería Quinta Primavera/C.png", "alt": "Área C", "cols": 4 },
+        { "url": "img/Hostería Quinta Primavera/EF.png", "alt": "Exterior", "cols": 4 },
+        { "url": "img/Hostería Quinta Primavera/F.png", "alt": "Fachada", "cols": 4 },
+        { "url": "img/Hostería Quinta Primavera/HF.png", "alt": "Hall", "cols": 12 }
+      ]
+    }
+  ]
+}

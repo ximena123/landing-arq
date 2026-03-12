@@ -1,0 +1,34 @@
+@if (content(); as c) {
+  <section class="projects-hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Proyectos de Diseño</h1>
+      <p>Explora nuestro portafolio de proyectos</p>
+    </div>
+  </section>
+
+  <section class="projects-grid">
+    <div class="container">
+      <div class="row g-4">
+        @for (project of c.projects; track project.id) {
+          <div class="col-lg-4 col-md-6">
+            <a [routerLink]="['/proyecto', project.id]" class="project-card">
+              <div class="card-image">
+                <img [src]="project.thumbnail" [alt]="project.title" loading="lazy" />
+                <div class="card-overlay">
+                  <span class="view-btn">Ver Proyecto</span>
+                </div>
+              </div>
+              <div class="card-info">
+                <h3>{{ project.title }}</h3>
+                <span class="year">{{ project.year }}</span>
+              </div>
+            </a>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <app-footer />
+}

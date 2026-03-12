@@ -1,0 +1,107 @@
+.navbar {
+  padding: 1rem 0;
+  transition: all 0.4s ease;
+  background: transparent;
+  z-index: 1000;
+
+  &.navbar-scrolled {
+    background: rgba(58, 64, 35, 0.95);
+    padding: 0.5rem 0;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .navbar-logo {
+    height: 50px;
+    transition: height 0.3s ease;
+  }
+
+  &.navbar-scrolled .navbar-logo {
+    height: 38px;
+  }
+
+  .navbar-collapse {
+    @media (max-width: 991px) {
+      display: none;
+      background: rgba(58, 64, 35, 0.98);
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      padding: 1rem;
+      border-radius: 0 0 12px 12px;
+
+      &.show {
+        display: block;
+      }
+    }
+  }
+
+  .nav-link {
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s ease;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 2px;
+      background: #c9a96e;
+      transition: width 0.3s ease;
+    }
+
+    &:hover {
+      color: #fff;
+
+      &::after {
+        width: 60%;
+      }
+    }
+  }
+}
+
+.toggler-icon {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 28px;
+  cursor: pointer;
+
+  span {
+    display: block;
+    height: 2px;
+    background: #fff;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+  }
+
+  &.open {
+    span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    span:nth-child(2) {
+      opacity: 0;
+    }
+    span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+  }
+}
+
+.navbar-toggler {
+  border: none;
+  padding: 0.5rem;
+
+  &:focus {
+    box-shadow: none;
+  }
+}

@@ -1,0 +1,42 @@
+.about-section {
+  padding: 6rem 0;
+  background: #fff;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 300;
+  color: #3A4023;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.title-divider {
+  width: 60px;
+  height: 3px;
+  background: #c9a96e;
+  margin: 1rem auto 0;
+}
+
+.about-text {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: #555;
+  text-align: justify;
+}
+
+.about-quote {
+  margin-top: 2rem;
+  padding: 1.5rem 2rem;
+  border-left: 4px solid #c9a96e;
+  background: #f9f8f5;
+  font-size: 1.15rem;
+  font-style: italic;
+  color: #3A4023;
+  border-radius: 0 8px 8px 0;
+}
