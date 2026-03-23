@@ -55,39 +55,70 @@
     }
   ],
   "counters": [
-    { "id": "c1", "value": 60, "prefix": "", "label": "Trabajos Completados", "icon": "fa-briefcase" },
-    { "id": "c2", "value": 5, "prefix": "", "label": "Años de Experiencia", "icon": "fa-calendar-alt" },
-    { "id": "c3", "value": 20, "prefix": "+", "label": "Total de Clientes", "icon": "fa-users" },
-    { "id": "c4", "value": 6, "prefix": "", "label": "Premios Ganados", "icon": "fa-trophy" }
+    {
+      "id": "c1",
+      "value": 60,
+      "prefix": "",
+      "label": "Trabajos Completados",
+      "icon": "fa-briefcase"
+    },
+    {
+      "id": "c2",
+      "value": 5,
+      "prefix": "",
+      "label": "Años de Experiencia",
+      "icon": "fa-calendar-alt"
+    },
+    {
+      "id": "c3",
+      "value": 20,
+      "prefix": "+",
+      "label": "Total de Clientes",
+      "icon": "fa-users"
+    },
+    {
+      "id": "c4",
+      "value": 6,
+      "prefix": "",
+      "label": "Premios Ganados",
+      "icon": "fa-trophy"
+    }
   ],
   "portfolio": [
     {
       "id": "p1",
       "title": "Diseño Interior Casa Centro",
-      "category": "Diseño",
-      "image": "img/Casa Centro/Comedor.png",
+      "category": "Diseño Interior",
+      "image": "img/uploaded/10.png",
       "link": "casa-centro"
     },
     {
       "id": "p2",
-      "title": "Visualización Arquitectónica Casa Eda",
-      "category": "Visualización Arquitectónica",
-      "image": "img/Casa Eda/F1.png",
+      "title": "Casa EDA",
+      "category": "Construcción",
+      "image": "img/uploaded/WhatsApp Image 2025-06-24 at 6.08.32 PM (2).jpeg",
       "link": "casa-eda"
+    },
+    {
+      "id": "new_1774045220549",
+      "title": "Casa BS",
+      "category": "Visualización Arquitectónica",
+      "image": "img/uploaded/Visualización Arquitectónica.png",
+      "link": "casa-bs"
     }
   ],
   "testimonials": [
     {
       "id": "t1",
-      "name": "Diana Puchaicela",
+      "name": "Diana Gonzalez",
       "text": "Trabajar con Paola Stefany Puchaicela fue una experiencia excepcional. Su habilidad para transformar ideas en diseños innovadores y funcionales es impresionante. Cada detalle fue cuidadosamente pensado, y el resultado superó nuestras expectativas. ¡Altamente recomendada!",
-      "image": "img/testimonial-2.jpg"
+      "image": ""
     },
     {
       "id": "t2",
-      "name": "Sr. Eda",
+      "name": "Edison",
       "text": "Estamos encantados con el trabajo. La puntualidad en la entrega y la atención meticulosa a cada detalle fueron sobresalientes. Se nos entregó planos detallados de cada espacio y supervisión durante la fase de construcción. Sin duda, volveríamos a confiar en su talento para futuros proyectos.",
-      "image": "img/testimonial-4.jpg"
+      "image": ""
     }
   ],
   "currentProject": {
@@ -100,93 +131,320 @@
     "location": "ECUADOR",
     "phone": "+593 990198732",
     "email": "paolastefanypuchaicela@gmail.com",
-    "instagram": "@paopuchaicela.3d",
-    "instagramUrl": "https://www.instagram.com/paopuchaicela.3d/",
+    "instagram": "@paolastefanypuchaicela",
+    "instagramUrl": "https://www.instagram.com/paolastefanypuchaicela/",
     "linkedin": "Paola Stefany Puchaicela",
-    "linkedinUrl": "https://www.linkedin.com/in/paola-stefany-puchaicela-b44b47233/",
+    "linkedinUrl": "https://www.linkedin.com/in/paola-stefany-puchaicela-4010a9210/",
     "tagline": "Diseñamos espacios que trascienden en el tiempo"
   },
   "projects": [
     {
-      "id": "consultorio-uio",
-      "title": "Consultorio Dental UIO",
-      "year": "2022",
-      "thumbnail": "img/Consultorio Dental UIO/1F1.png",
-      "description": "Diseño de consultorio dental en Quito con distribución optimizada por pisos.",
+      "id": "project_1774045853837",
+      "title": "BBQ FP",
+      "year": "2019",
+      "thumbnail": "img/uploaded/BBQ.png",
+      "description": "Diseñé esta área BBQ como un espacio funcional, moderno y acogedor, donde cada elemento está pensado para disfrutar y compartir. Un equilibrio entre diseño, durabilidad y experiencia.",
       "images": [
-        { "url": "img/Consultorio Dental UIO/1F1.png", "alt": "Planta 1", "cols": 4 },
-        { "url": "img/Consultorio Dental UIO/2F1.png", "alt": "Planta 2", "cols": 4 },
-        { "url": "img/Consultorio Dental UIO/3F1.png", "alt": "Planta 3", "cols": 4 }
+        {
+          "url": "img/uploaded/BBQ.png",
+          "alt": "",
+          "cols": 4
+        }
       ]
     },
     {
-      "id": "casa-centro",
+      "id": "project_1774045915253",
+      "title": "Casa Sonia",
+      "year": "2022",
+      "thumbnail": "img/uploaded/Fachada general.png",
+      "description": "Casa Sonia es una vivienda contemporánea diseñada bajo criterios de simplicidad, funcionalidad y confort, donde la luz natural y la materialidad generan un espacio equilibrado y acogedor.\nLa simplicidad bien pensada siempre trasciende.",
+      "images": [
+        {
+          "url": "img/uploaded/Fachada general.png",
+          "alt": "",
+          "cols": 4
+        }
+      ]
+    },
+    {
+      "id": "project_1774046080693",
+      "title": "Casa Vaju",
+      "year": "2020",
+      "thumbnail": "img/uploaded/Interior Casa Vaju.png",
+      "description": "En Casa Vaju a través del diseño interior, se logró crear un espacio que no solo responde a criterios estéticos, sino que mejora la experiencia de habitarlo, generando confort, funcionalidad y conexión con el entorno.",
+      "images": [
+        {
+          "url": "img/uploaded/Interior Casa Vaju.png",
+          "alt": "",
+          "cols": 4
+        }
+      ]
+    },
+    {
+      "id": "project_1774048697484",
+      "title": "Consultorio Dental Origin",
+      "year": "2020",
+      "thumbnail": "img/uploaded/PORTADA.png",
+      "description": "Con nuestros amigos de Origin, a través del diseño arquitectónico y la visualización, logramos un espacio que no solo cumple con criterios técnicos y funcionales, sino que también transmite confianza y profesionalismo, aspectos clave en este tipo de ambientes.",
+      "images": [
+        {
+          "url": "img/uploaded/1F1.png",
+          "alt": "",
+          "cols": 3
+        },
+        {
+          "url": "img/uploaded/2F1.png",
+          "alt": "",
+          "cols": 3
+        },
+        {
+          "url": "img/uploaded/3F1.png",
+          "alt": "",
+          "cols": 3
+        },
+        {
+          "url": "img/uploaded/4F1.png",
+          "alt": "",
+          "cols": 2
+        },
+        {
+          "url": "img/uploaded/5F1.png",
+          "alt": "",
+          "cols": 2
+        }
+      ]
+    },
+    {
+      "id": "project_1774048911308",
       "title": "Casa Centro",
       "year": "2022",
-      "thumbnail": "img/Casa Centro/Comedor.png",
-      "description": "Diseño interior completo de residencia en el centro de la ciudad.",
+      "thumbnail": "img/uploaded/Comedor.png",
+      "description": "En Casa Centro trabajamos el diseño arquitectónico, diseño interior y construcción, logrando espacios cálidos, elegantes y pensados para vivirse.\nDiseñamos espacios que se sienten tanto como se ven.",
       "images": [
-        { "url": "img/Casa Centro/10.png", "alt": "Vista general", "cols": 4 },
-        { "url": "img/Casa Centro/Cocina 2 01.png", "alt": "Cocina", "cols": 4 },
-        { "url": "img/Casa Centro/Comedor.png", "alt": "Comedor", "cols": 4 },
-        { "url": "img/Casa Centro/Dormitorio Karen A.png", "alt": "Dormitorio A", "cols": 8 },
-        { "url": "img/Casa Centro/Dormitorio Karen B.png", "alt": "Dormitorio B", "cols": 4 },
-        { "url": "img/Casa Centro/Dormitorio Karen C 2.png", "alt": "Dormitorio C", "cols": 4 },
-        { "url": "img/Casa Centro/Vestidor Karen C.png", "alt": "Vestidor C", "cols": 4 },
-        { "url": "img/Casa Centro/Vestidor Master B.png", "alt": "Vestidor Master", "cols": 4 }
+        {
+          "url": "img/uploaded/10.png",
+          "alt": "",
+          "cols": 4
+        },
+        {
+          "url": "img/uploaded/Cocina 2 01.png",
+          "alt": "",
+          "cols": 4
+        },
+        {
+          "url": "img/uploaded/Comedor.png",
+          "alt": "",
+          "cols": 4
+        },
+        {
+          "url": "img/uploaded/Dormitorio Karen A.png",
+          "alt": "",
+          "cols": 4
+        },
+        {
+          "url": "img/uploaded/Dormitorio Karen C 2.png",
+          "alt": "",
+          "cols": 4
+        },
+        {
+          "url": "img/uploaded/Vestidor Karen C.png",
+          "alt": "",
+          "cols": 4
+        },
+        {
+          "url": "img/uploaded/Vestidor Master B.png",
+          "alt": "",
+          "cols": 4
+        }
       ]
     },
     {
-      "id": "centro-comunal-lumbaqui",
-      "title": "Centro Comunal Lumbaqui",
-      "year": "2023",
-      "thumbnail": "img/Centro Comunal Lumbaqui/1.png",
-      "description": "Diseño arquitectónico de centro comunal para la comunidad de Lumbaqui.",
-      "images": [
-        { "url": "img/Centro Comunal Lumbaqui/1.png", "alt": "Vista 1", "cols": 4 },
-        { "url": "img/Centro Comunal Lumbaqui/2.png", "alt": "Vista 2", "cols": 4 },
-        { "url": "img/Centro Comunal Lumbaqui/3.png", "alt": "Vista 3", "cols": 4 },
-        { "url": "img/Centro Comunal Lumbaqui/5.png", "alt": "Vista 5", "cols": 6 },
-        { "url": "img/Centro Comunal Lumbaqui/6.png", "alt": "Vista 6", "cols": 6 },
-        { "url": "img/Centro Comunal Lumbaqui/7.png", "alt": "Vista 7", "cols": 4 },
-        { "url": "img/Centro Comunal Lumbaqui/8.png", "alt": "Vista 8", "cols": 4 },
-        { "url": "img/Centro Comunal Lumbaqui/9.png", "alt": "Vista 9", "cols": 4 }
-      ]
-    },
-    {
-      "id": "casa-eda",
+      "id": "project_1774049183308",
       "title": "Casa Eda",
       "year": "2024",
-      "thumbnail": "img/Casa Eda/F1.png",
-      "description": "Visualización arquitectónica completa de residencia moderna.",
+      "thumbnail": "img/uploaded/PORTADA.png",
+      "description": "En este proyecto trabajamos el diseño arquitectónico, diseño interior y construcción, creando un espacio moderno, elegante y funcional, donde los materiales y la iluminación son protagonistas.\nLa propuesta combina materiales como mármol, madera y acabados oscuros, logrando un equilibrio entre sofisticación y calidez. El área social se define a partir de una composición limpia, donde la cocina se integra al espacio mediante una isla que funciona tanto a nivel práctico como visual.\n\nEl diseño de cielos falsos y la iluminación juegan un papel clave, generando diferentes ambientes dentro de un mismo espacio. La incorporación de iluminación indirecta y detalles lineales aporta profundidad y refuerza el lenguaje contemporáneo del proyecto.",
       "images": [
-        { "url": "img/Casa Eda/F1.png", "alt": "Fachada 1", "cols": 4 },
-        { "url": "img/Casa Eda/F13.png", "alt": "Fachada 13", "cols": 4 },
-        { "url": "img/Casa Eda/F2.png", "alt": "Fachada 2", "cols": 4 },
-        { "url": "img/Casa Eda/F3.png", "alt": "Interior 3", "cols": 4 },
-        { "url": "img/Casa Eda/F4.png", "alt": "Interior 4", "cols": 4 },
-        { "url": "img/Casa Eda/F5.png", "alt": "Interior 5", "cols": 4 },
-        { "url": "img/Casa Eda/F7.png", "alt": "Interior 7", "cols": 4 },
-        { "url": "img/Casa Eda/F8.png", "alt": "Interior 8", "cols": 4 },
-        { "url": "img/Casa Eda/F9.png", "alt": "Interior 9", "cols": 4 }
+        {
+          "url": "img/uploaded/F1.png",
+          "alt": "",
+          "cols": 4
+        },
+        {
+          "url": "img/uploaded/F2.png",
+          "alt": "",
+          "cols": 4
+        },
+        {
+          "url": "img/uploaded/F3.png",
+          "alt": "",
+          "cols": 4
+        },
+        {
+          "url": "img/uploaded/F4.png",
+          "alt": "",
+          "cols": 4
+        },
+        {
+          "url": "img/uploaded/F7.png",
+          "alt": "",
+          "cols": 4
+        },
+        {
+          "url": "img/uploaded/F13.png",
+          "alt": "",
+          "cols": 4
+        },
+        {
+          "url": "img/uploaded/001.png",
+          "alt": "",
+          "cols": 4
+        },
+        {
+          "url": "img/uploaded/002.png",
+          "alt": "",
+          "cols": 4
+        },
+        {
+          "url": "img/uploaded/004.png",
+          "alt": "",
+          "cols": 4
+        },
+        {
+          "url": "img/uploaded/005.png",
+          "alt": "",
+          "cols": 4
+        },
+        {
+          "url": "img/uploaded/006.png",
+          "alt": "",
+          "cols": 4
+        },
+        {
+          "url": "img/uploaded/007.png",
+          "alt": "",
+          "cols": 4
+        }
       ]
     },
     {
-      "id": "quinta-primavera",
-      "title": "Hostería Quinta Primavera",
+      "id": "project_1774049460908",
+      "title": "Hostería Quínta Primavera",
       "year": "2024-2025",
-      "thumbnail": "img/Hostería Quinta Primavera/1.png",
-      "description": "Diseño de hostería con enfoque en hospitalidad y naturaleza.",
+      "thumbnail": "img/uploaded/PORTADA.png",
+      "description": "En Hostería Quinta Primavera diseñamos un espacio pensado para reconectar con la calma, la naturaleza y los sentidos. La propuesta nace de la intención de crear una experiencia donde la arquitectura y el agua se integran de manera natural, generando un ambiente de descanso y contemplación.\nAquí trabajamos el diseño arquitectónico, la ingeniería y la visualización, creando un espacio donde el agua, la arquitectura y la naturaleza se integran para generar una experiencia de relajación.",
       "images": [
-        { "url": "img/Hostería Quinta Primavera/1.png", "alt": "Vista 1", "cols": 4 },
-        { "url": "img/Hostería Quinta Primavera/2.png", "alt": "Vista 2", "cols": 4 },
-        { "url": "img/Hostería Quinta Primavera/4.png", "alt": "Vista 4", "cols": 4 },
-        { "url": "img/Hostería Quinta Primavera/A(1).png", "alt": "Área A", "cols": 6 },
-        { "url": "img/Hostería Quinta Primavera/A.png", "alt": "Área A alt", "cols": 6 },
-        { "url": "img/Hostería Quinta Primavera/C.png", "alt": "Área C", "cols": 4 },
-        { "url": "img/Hostería Quinta Primavera/EF.png", "alt": "Exterior", "cols": 4 },
-        { "url": "img/Hostería Quinta Primavera/F.png", "alt": "Fachada", "cols": 4 },
-        { "url": "img/Hostería Quinta Primavera/HF.png", "alt": "Hall", "cols": 12 }
+        {
+          "url": "img/uploaded/Hostería Quinta Primavera 01.png",
+          "alt": "",
+          "cols": 4
+        },
+        {
+          "url": "img/uploaded/Hostería Quinta Primavera.png",
+          "alt": "",
+          "cols": 4
+        }
+      ]
+    },
+    {
+      "id": "project_1774280106589",
+      "title": "Centro comunitario Landangui",
+      "year": "2023",
+      "thumbnail": "img/uploaded/Centro Comunal Lumbaqui 02.png",
+      "description": "",
+      "images": [
+        {
+          "url": "img/uploaded/Centro Comunal Lumbaqui 01.png",
+          "alt": "",
+          "cols": 4
+        },
+        {
+          "url": "img/uploaded/Centro Comunal Lumbaqui 02.png",
+          "alt": "",
+          "cols": 4
+        },
+        {
+          "url": "img/uploaded/Centro Comunal Lumbaqui 03.png",
+          "alt": "",
+          "cols": 4
+        },
+        {
+          "url": "img/uploaded/Centro Comunal Lumbaqui 04.png",
+          "alt": "",
+          "cols": 4
+        },
+        {
+          "url": "img/uploaded/Centro Comunal Lumbaqui 05.png",
+          "alt": "",
+          "cols": 4
+        },
+        {
+          "url": "img/uploaded/Centro Comunal Lumbaqui 06.png",
+          "alt": "",
+          "cols": 4
+        },
+        {
+          "url": "img/uploaded/Centro Comunal Lumbaqui 07.png",
+          "alt": "",
+          "cols": 4
+        },
+        {
+          "url": "img/uploaded/Centro Comunal Lumbaqui 08.png",
+          "alt": "",
+          "cols": 4
+        }
+      ]
+    },
+    {
+      "id": "project_1774280254693",
+      "title": "Cocina IC",
+      "year": "2023",
+      "thumbnail": "img/uploaded/Cocina 03.png",
+      "description": "",
+      "images": [
+        {
+          "url": "img/uploaded/Cocina 01.png",
+          "alt": "",
+          "cols": 4
+        },
+        {
+          "url": "img/uploaded/Cocina 02.png",
+          "alt": "",
+          "cols": 4
+        },
+        {
+          "url": "img/uploaded/Cocina 03.png",
+          "alt": "",
+          "cols": 4
+        }
+      ]
+    },
+    {
+      "id": "project_1774280356533",
+      "title": "Bar Casa BS",
+      "year": "2024",
+      "thumbnail": "img/uploaded/PORTADA.png",
+      "description": "",
+      "images": [
+        {
+          "url": "img/uploaded/Bar Casa Bravo.png",
+          "alt": "",
+          "cols": 4
+        }
+      ]
+    },
+    {
+      "id": "project_1774280434468",
+      "title": "Casa Sara",
+      "year": "2025",
+      "thumbnail": "img/uploaded/Casa Sara_Cocina 01.png",
+      "description": "",
+      "images": [
+        {
+          "url": "img/uploaded/Casa Sara_Cocina 01.png",
+          "alt": "",
+          "cols": 4
+        }
       ]
     }
   ]

@@ -14,21 +14,18 @@ export class ContentService {
   constructor(private http: HttpClient) {}
 
   async loadContent(): Promise<void> {
-    const stored = localStorage.getItem(STORAGE_KEY);
-    if (stored) {
-      try {
+    try {
+      const data = await firstValueFrom(
+        this.http.get<SiteContent>('data/content.json')
+      );
+      this.contentSignal.set(data);
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+    } catch {
+      const stored = localStorage.getItem(STORAGE_KEY);
+      if (stored) {
         this.contentSignal.set(JSON.parse(stored));
-        return;
-      } catch {
-        localStorage.removeItem(STORAGE_KEY);
       }
     }
-
-    const data = await firstValueFrom(
-      this.http.get<SiteContent>('data/content.json')
-    );
-    this.contentSignal.set(data);
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
   }
 
   updateContent(content: SiteContent): void {

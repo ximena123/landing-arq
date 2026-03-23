@@ -1,0 +1,451 @@
+{
+  "hero": {
+    "logo": "img/Logo-03.png",
+    "title": "Paola Stefany Puchaicela",
+    "subtitle": "Architecture & Interior Design, Architectural visualization",
+    "backgroundImage": "img/banner-horizontal.png"
+  },
+  "about": {
+    "title": "Acerca de Mi",
+    "description": "Soy una apasionada de la arquitectura e interiorismo. Me dedico a crear espacios que no solo sean estéticamente impactantes, sino también funcionales y armoniosos. Con experiencia en diseño interior, arquitectónico, y visualización arquitectónica, transformo ideas en ambientes que reflejan la personalidad y necesidades de cada cliente. Mi enfoque combina creatividad, atención al detalle y un profundo conocimiento de materiales y tendencias, para ofrecer soluciones que van más allá de lo convencional. Trabajo a nivel mundial buscando dar lo mejor de mí en cada trabajo, cuento con el respaldo de un equipo de profesionales: ingenieros, residentes de obra, y especialistas en diversas áreas.",
+    "highlightText": "\"Si imaginas un espacio único, puedo hacerlo posible.\""
+  },
+  "services": [
+    {
+      "id": "arq",
+      "icon": "fa-drafting-compass",
+      "title": "Diseño Arquitectónico",
+      "description": "Proyectos arquitectónicos funcionales y estéticos adaptados a sus necesidades. Diseños que combinan innovación y funcionalidad para crear espacios únicos.",
+      "backgroundImage": "img/arq.png"
+    },
+    {
+      "id": "int",
+      "icon": "fa-couch",
+      "title": "Diseño Interior",
+      "description": "Espacios interiores equilibrados y personalizados. Optimizamos cada rincón para lograr confort, estética y funcionalidad en perfecta armonía.",
+      "backgroundImage": "img/int.png"
+    },
+    {
+      "id": "urb",
+      "icon": "fa-city",
+      "title": "Diseño Urbano",
+      "description": "Soluciones urbanas innovadoras que mejoran la calidad de vida. Diseños sostenibles que transforman el entorno y potencian la comunidad.",
+      "backgroundImage": "img/urb.png"
+    },
+    {
+      "id": "viz",
+      "icon": "fa-cube",
+      "title": "Visualización Arquitectónica",
+      "description": "Imágenes 3D realistas y recorridos virtuales. Visualice su proyecto con previsualizaciones detalladas antes de la construcción.",
+      "backgroundImage": "img/viz.png"
+    },
+    {
+      "id": "const",
+      "icon": "fa-hard-hat",
+      "title": "Construcción",
+      "description": "Ejecución de obras con los más altos estándares de calidad. Llevamos su proyecto del papel a la realidad con eficiencia y precisión.",
+      "backgroundImage": "img/const.jpg"
+    },
+    {
+      "id": "mob",
+      "icon": "fa-chair",
+      "title": "Mobiliario",
+      "description": "Diseño y fabricación de mobiliario personalizado. Piezas únicas adaptadas a cada espacio y estilo de vida.",
+      "backgroundImage": "img/mob.png"
+    }
+  ],
+  "counters": [
+    {
+      "id": "c1",
+      "value": 60,
+      "prefix": "",
+      "label": "Trabajos Completados",
+      "icon": "fa-briefcase"
+    },
+    {
+      "id": "c2",
+      "value": 5,
+      "prefix": "",
+      "label": "Años de Experiencia",
+      "icon": "fa-calendar-alt"
+    },
+    {
+      "id": "c3",
+      "value": 20,
+      "prefix": "+",
+      "label": "Total de Clientes",
+      "icon": "fa-users"
+    },
+    {
+      "id": "c4",
+      "value": 6,
+      "prefix": "",
+      "label": "Premios Ganados",
+      "icon": "fa-trophy"
+    }
+  ],
+  "portfolio": [
+    {
+      "id": "p1",
+      "title": "Diseño Interior Casa Centro",
+      "category": "Diseño Interior",
+      "image": "img/uploaded/10.png",
+      "link": "casa-centro"
+    },
+    {
+      "id": "p2",
+      "title": "Casa EDA",
+      "category": "Construcción",
+      "image": "img/uploaded/WhatsApp Image 2025-06-24 at 6.08.32 PM (2).jpeg",
+      "link": "casa-eda"
+    },
+    {
+      "id": "new_1774045220549",
+      "title": "Casa BS",
+      "category": "Visualización Arquitectónica",
+      "image": "img/uploaded/Visualización Arquitectónica.png",
+      "link": "casa-bs"
+    }
+  ],
+  "testimonials": [
+    {
+      "id": "t1",
+      "name": "Diana Gonzalez",
+      "text": "Trabajar con Paola Stefany Puchaicela fue una experiencia excepcional. Su habilidad para transformar ideas en diseños innovadores y funcionales es impresionante. Cada detalle fue cuidadosamente pensado, y el resultado superó nuestras expectativas. ¡Altamente recomendada!",
+      "image": ""
+    },
+    {
+      "id": "t2",
+      "name": "Edison",
+      "text": "Estamos encantados con el trabajo. La puntualidad en la entrega y la atención meticulosa a cada detalle fueron sobresalientes. Se nos entregó planos detallados de cada espacio y supervisión durante la fase de construcción. Sin duda, volveríamos a confiar en su talento para futuros proyectos.",
+      "image": ""
+    }
+  ],
+  "currentProject": {
+    "title": "Proyecto en Curso",
+    "subtitle": "Proyecto Residencial",
+    "description": "Actualmente, estoy trabajando en un emocionante proyecto residencial que busca fusionar el diseño minimalista con la naturaleza. Esta residencia está siendo diseñada con un enfoque en la simplicidad y el confort, utilizando materiales naturales como piedra y madera para crear un ambiente cálido y acogedor. Los tonos neutros predominan en la paleta de colores, permitiendo que los elementos naturales se conviertan en los protagonistas del espacio. Con amplios ventanales y una iluminación cálida, la casa está pensada para integrarse con su entorno, ofreciendo vistas panorámicas y una conexión directa con el exterior. La piscina central se convierte en un elemento clave del diseño, proporcionando un punto focal que une los diferentes espacios de la vivienda.",
+    "image": "img/proyecto-curso.jpg"
+  },
+  "contact": {
+    "location": "ECUADOR",
+    "phone": "+593 990198732",
+    "email": "paolastefanypuchaicela@gmail.com",
+    "instagram": "@paolastefanypuchaicela",
+    "instagramUrl": "https://www.instagram.com/paolastefanypuchaicela/",
+    "linkedin": "Paola Stefany Puchaicela",
+    "linkedinUrl": "https://www.linkedin.com/in/paola-stefany-puchaicela-4010a9210/",
+    "tagline": "Diseñamos espacios que trascienden en el tiempo"
+  },
+  "projects": [
+    {
+      "id": "project_1774045853837",
+      "title": "BBQ FP",
+      "year": "2019",
+      "thumbnail": "img/uploaded/BBQ.png",
+      "description": "Diseñé esta área BBQ como un espacio funcional, moderno y acogedor, donde cada elemento está pensado para disfrutar y compartir. Un equilibrio entre diseño, durabilidad y experiencia.",
+      "images": [
+        {
+          "url": "img/uploaded/BBQ.png",
+          "alt": "",
+          "cols": 4
+        }
+      ]
+    },
+    {
+      "id": "project_1774045915253",
+      "title": "Casa Sonia",
+      "year": "2022",
+      "thumbnail": "img/uploaded/Fachada general.png",
+      "description": "Casa Sonia es una vivienda contemporánea diseñada bajo criterios de simplicidad, funcionalidad y confort, donde la luz natural y la materialidad generan un espacio equilibrado y acogedor.\nLa simplicidad bien pensada siempre trasciende.",
+      "images": [
+        {
+          "url": "img/uploaded/Fachada general.png",
+          "alt": "",
+          "cols": 4
+        }
+      ]
+    },
+    {
+      "id": "project_1774046080693",
+      "title": "Casa Vaju",
+      "year": "2020",
+      "thumbnail": "img/uploaded/Interior Casa Vaju.png",
+      "description": "En Casa Vaju a través del diseño interior, se logró crear un espacio que no solo responde a criterios estéticos, sino que mejora la experiencia de habitarlo, generando confort, funcionalidad y conexión con el entorno.",
+      "images": [
+        {
+          "url": "img/uploaded/Interior Casa Vaju.png",
+          "alt": "",
+          "cols": 4
+        }
+      ]
+    },
+    {
+      "id": "project_1774048697484",
+      "title": "Consultorio Dental Origin",
+      "year": "2020",
+      "thumbnail": "img/uploaded/PORTADA.png",
+      "description": "Con nuestros amigos de Origin, a través del diseño arquitectónico y la visualización, logramos un espacio que no solo cumple con criterios técnicos y funcionales, sino que también transmite confianza y profesionalismo, aspectos clave en este tipo de ambientes.",
+      "images": [
+        {
+          "url": "img/uploaded/1F1.png",
+          "alt": "",
+          "cols": 3
+        },
+        {
+          "url": "img/uploaded/2F1.png",
+          "alt": "",
+          "cols": 3
+        },
+        {
+          "url": "img/uploaded/3F1.png",
+          "alt": "",
+          "cols": 3
+        },
+        {
+          "url": "img/uploaded/4F1.png",
+          "alt": "",
+          "cols": 2
+        },
+        {
+          "url": "img/uploaded/5F1.png",
+          "alt": "",
+          "cols": 2
+        }
+      ]
+    },
+    {
+      "id": "project_1774048911308",
+      "title": "Casa Centro",
+      "year": "2022",
+      "thumbnail": "img/uploaded/Comedor.png",
+      "description": "En Casa Centro trabajamos el diseño arquitectónico, diseño interior y construcción, logrando espacios cálidos, elegantes y pensados para vivirse.\nDiseñamos espacios que se sienten tanto como se ven.",
+      "images": [
+        {
+          "url": "img/uploaded/10.png",
+          "alt": "",
+          "cols": 4
+        },
+        {
+          "url": "img/uploaded/Cocina 2 01.png",
+          "alt": "",
+          "cols": 4
+        },
+        {
+          "url": "img/uploaded/Comedor.png",
+          "alt": "",
+          "cols": 4
+        },
+        {
+          "url": "img/uploaded/Dormitorio Karen A.png",
+          "alt": "",
+          "cols": 4
+        },
+        {
+          "url": "img/uploaded/Dormitorio Karen C 2.png",
+          "alt": "",
+          "cols": 4
+        },
+        {
+          "url": "img/uploaded/Vestidor Karen C.png",
+          "alt": "",
+          "cols": 4
+        },
+        {
+          "url": "img/uploaded/Vestidor Master B.png",
+          "alt": "",
+          "cols": 4
+        }
+      ]
+    },
+    {
+      "id": "project_1774049183308",
+      "title": "Casa Eda",
+      "year": "2024",
+      "thumbnail": "img/uploaded/PORTADA.png",
+      "description": "En este proyecto trabajamos el diseño arquitectónico, diseño interior y construcción, creando un espacio moderno, elegante y funcional, donde los materiales y la iluminación son protagonistas.\nLa propuesta combina materiales como mármol, madera y acabados oscuros, logrando un equilibrio entre sofisticación y calidez. El área social se define a partir de una composición limpia, donde la cocina se integra al espacio mediante una isla que funciona tanto a nivel práctico como visual.\n\nEl diseño de cielos falsos y la iluminación juegan un papel clave, generando diferentes ambientes dentro de un mismo espacio. La incorporación de iluminación indirecta y detalles lineales aporta profundidad y refuerza el lenguaje contemporáneo del proyecto.",
+      "images": [
+        {
+          "url": "img/uploaded/F1.png",
+          "alt": "",
+          "cols": 4
+        },
+        {
+          "url": "img/uploaded/F2.png",
+          "alt": "",
+          "cols": 4
+        },
+        {
+          "url": "img/uploaded/F3.png",
+          "alt": "",
+          "cols": 4
+        },
+        {
+          "url": "img/uploaded/F4.png",
+          "alt": "",
+          "cols": 4
+        },
+        {
+          "url": "img/uploaded/F7.png",
+          "alt": "",
+          "cols": 4
+        },
+        {
+          "url": "img/uploaded/F13.png",
+          "alt": "",
+          "cols": 4
+        },
+        {
+          "url": "img/uploaded/001.png",
+          "alt": "",
+          "cols": 4
+        },
+        {
+          "url": "img/uploaded/002.png",
+          "alt": "",
+          "cols": 4
+        },
+        {
+          "url": "img/uploaded/004.png",
+          "alt": "",
+          "cols": 4
+        },
+        {
+          "url": "img/uploaded/005.png",
+          "alt": "",
+          "cols": 4
+        },
+        {
+          "url": "img/uploaded/006.png",
+          "alt": "",
+          "cols": 4
+        },
+        {
+          "url": "img/uploaded/007.png",
+          "alt": "",
+          "cols": 4
+        }
+      ]
+    },
+    {
+      "id": "project_1774049460908",
+      "title": "Hostería Quínta Primavera",
+      "year": "2024-2025",
+      "thumbnail": "img/uploaded/PORTADA.png",
+      "description": "En Hostería Quinta Primavera diseñamos un espacio pensado para reconectar con la calma, la naturaleza y los sentidos. La propuesta nace de la intención de crear una experiencia donde la arquitectura y el agua se integran de manera natural, generando un ambiente de descanso y contemplación.\nAquí trabajamos el diseño arquitectónico, la ingeniería y la visualización, creando un espacio donde el agua, la arquitectura y la naturaleza se integran para generar una experiencia de relajación.",
+      "images": [
+        {
+          "url": "img/uploaded/Hostería Quinta Primavera 01.png",
+          "alt": "",
+          "cols": 4
+        },
+        {
+          "url": "img/uploaded/Hostería Quinta Primavera.png",
+          "alt": "",
+          "cols": 4
+        }
+      ]
+    },
+    {
+      "id": "project_1774280106589",
+      "title": "Centro comunitario Landangui",
+      "year": "2023",
+      "thumbnail": "img/uploaded/Centro Comunal Lumbaqui 02.png",
+      "description": "",
+      "images": [
+        {
+          "url": "img/uploaded/Centro Comunal Lumbaqui 01.png",
+          "alt": "",
+          "cols": 4
+        },
+        {
+          "url": "img/uploaded/Centro Comunal Lumbaqui 02.png",
+          "alt": "",
+          "cols": 4
+        },
+        {
+          "url": "img/uploaded/Centro Comunal Lumbaqui 03.png",
+          "alt": "",
+          "cols": 4
+        },
+        {
+          "url": "img/uploaded/Centro Comunal Lumbaqui 04.png",
+          "alt": "",
+          "cols": 4
+        },
+        {
+          "url": "img/uploaded/Centro Comunal Lumbaqui 05.png",
+          "alt": "",
+          "cols": 4
+        },
+        {
+          "url": "img/uploaded/Centro Comunal Lumbaqui 06.png",
+          "alt": "",
+          "cols": 4
+        },
+        {
+          "url": "img/uploaded/Centro Comunal Lumbaqui 07.png",
+          "alt": "",
+          "cols": 4
+        },
+        {
+          "url": "img/uploaded/Centro Comunal Lumbaqui 08.png",
+          "alt": "",
+          "cols": 4
+        }
+      ]
+    },
+    {
+      "id": "project_1774280254693",
+      "title": "Cocina IC",
+      "year": "2023",
+      "thumbnail": "img/uploaded/Cocina 03.png",
+      "description": "",
+      "images": [
+        {
+          "url": "img/uploaded/Cocina 01.png",
+          "alt": "",
+          "cols": 4
+        },
+        {
+          "url": "img/uploaded/Cocina 02.png",
+          "alt": "",
+          "cols": 4
+        },
+        {
+          "url": "img/uploaded/Cocina 03.png",
+          "alt": "",
+          "cols": 4
+        }
+      ]
+    },
+    {
+      "id": "project_1774280356533",
+      "title": "Bar Casa BS",
+      "year": "2024",
+      "thumbnail": "img/uploaded/PORTADA.png",
+      "description": "",
+      "images": [
+        {
+          "url": "img/uploaded/Bar Casa Bravo.png",
+          "alt": "",
+          "cols": 4
+        }
+      ]
+    },
+    {
+      "id": "project_1774280434468",
+      "title": "Casa Sara",
+      "year": "2025",
+      "thumbnail": "img/uploaded/Casa Sara_Cocina 01.png",
+      "description": "",
+      "images": [
+        {
+          "url": "img/uploaded/Casa Sara_Cocina 01.png",
+          "alt": "",
+          "cols": 4
+        }
+      ]
+    }
+  ]
+}
