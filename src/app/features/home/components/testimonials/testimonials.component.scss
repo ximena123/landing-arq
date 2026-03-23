@@ -65,12 +65,19 @@
   gap: 1rem;
 }
 
-.author-img {
-  width: 55px;
-  height: 55px;
+.author-avatar {
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #c9a96e;
+  background: #3A4023;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  flex-shrink: 0;
 }
 
 .author-name {

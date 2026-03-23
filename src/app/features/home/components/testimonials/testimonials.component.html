@@ -13,7 +13,7 @@
               <i class="fa-solid fa-quote-left quote-icon"></i>
               <p class="testimonial-text">{{ testimonial.text }}</p>
               <div class="testimonial-author">
-                <app-img [src]="testimonial.image" [alt]="testimonial.name" imgClass="author-img" />
+                <span class="author-avatar">{{ testimonial.name.charAt(0) }}</span>
                 <span class="author-name">{{ testimonial.name }}</span>
               </div>
             </div>

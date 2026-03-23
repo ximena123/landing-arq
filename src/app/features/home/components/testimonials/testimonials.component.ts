@@ -1,11 +1,8 @@
 import { Component, inject, signal } from '@angular/core';
 import { ContentService } from '../../../../core/services/content.service';
-import { ImgComponent } from '../../../../shared/components/img/img.component';
-
 @Component({
   selector: 'app-testimonials',
   standalone: true,
-  imports: [ImgComponent],
   templateUrl: './testimonials.component.html',
   styleUrl: './testimonials.component.scss'
 })
