@@ -1,93 +1,206 @@
 .portfolio-section {
-  padding: 6rem 0;
+  padding: 10rem 0 8rem;
   background: #fff;
+
+  @media (max-width: 768px) {
+    padding: 5rem 0 4rem;
+  }
 }
 
-.section-header {
+.portfolio-header {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
+  padding: 0 2rem;
+
+  @media (max-width: 768px) {
+    margin-bottom: 3rem;
+  }
 }
 
-.section-title {
-  font-size: 2.2rem;
-  font-weight: 300;
+.header-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+
+  .label-text {
+    font-size: 0.65rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #c9a96e;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  .label-line {
+    width: 40px;
+    height: 1px;
+    background: #c9a96e;
+    opacity: 0.4;
+  }
+}
+
+.portfolio-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 400;
   color: #3A4023;
-  letter-spacing: 3px;
-  text-transform: uppercase;
+
+  @media (max-width: 768px) {
+    font-size: 2.2rem;
+  }
 }
 
-.title-divider {
-  width: 60px;
-  height: 3px;
-  background: #c9a96e;
-  margin: 1rem auto 0;
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .portfolio-card {
   display: block;
   position: relative;
-  border-radius: 12px;
   overflow: hidden;
-  text-decoration: none;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 4 / 3;
 
-  img {
+  &--featured {
+    grid-column: span 2;
+    aspect-ratio: 21 / 9;
+
+    @media (max-width: 768px) {
+      grid-column: span 1;
+      aspect-ratio: 4 / 3;
+    }
+
+    .portfolio-title {
+      font-size: 2rem;
+
+      @media (max-width: 768px) {
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  img,
+  ::ng-deep app-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease;
+    filter: grayscale(100%);
+    transition: transform 1s cubic-bezier(0.25, 1, 0.5, 1),
+                filter 0.6s cubic-bezier(0.25, 1, 0.5, 1);
   }
 
-  &:hover img {
-    transform: scale(1.08);
+  &:hover img,
+  &:hover ::ng-deep app-img img {
+    transform: scale(1.05);
+    filter: grayscale(0%);
+  }
+
+  &:hover .portfolio-overlay {
+    background: linear-gradient(
+      to top,
+      rgba(26, 30, 15, 0.9) 0%,
+      rgba(26, 30, 15, 0.15) 50%,
+      transparent 100%
+    );
+  }
+
+  &:hover .portfolio-category {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
 .portfolio-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(26, 30, 15, 0.8) 0%, transparent 60%);
+  background: linear-gradient(
+    to top,
+    rgba(26, 30, 15, 0.6) 0%,
+    transparent 40%
+  );
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 2rem;
-  transition: background 0.3s;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 2.5rem;
+  transition: background 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 
-  .portfolio-card:hover & {
-    background: linear-gradient(to top, rgba(26, 30, 15, 0.9) 0%, rgba(58, 64, 35, 0.3) 100%);
+  @media (max-width: 576px) {
+    padding: 1.5rem;
   }
 }
 
+.portfolio-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
 .portfolio-category {
-  font-size: 0.8rem;
+  font-size: 0.65rem;
   color: #c9a96e;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 0.3rem;
+  letter-spacing: 3px;
+  font-weight: 500;
+  opacity: 0;
+  transform: translateY(5px);
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .portfolio-title {
   color: #fff;
-  font-size: 1.3rem;
-  font-weight: 500;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 400;
   margin: 0;
+  letter-spacing: 1px;
+
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+  }
+}
+
+.portfolio-action {
+  text-align: center;
+  margin-top: 4rem;
 }
 
 .btn-view-all {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.8rem 2rem;
-  background: #3A4023;
-  color: #fff;
-  border-radius: 30px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
   text-decoration: none;
-  font-size: 0.9rem;
-  letter-spacing: 1px;
-  transition: all 0.3s ease;
+  color: #3A4023;
+  transition: color 0.4s;
+
+  span:first-child {
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .btn-line {
+    display: block;
+    width: 30px;
+    height: 1px;
+    background: #3A4023;
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  }
 
   &:hover {
-    background: #697446;
-    transform: translateY(-2px);
-    color: #fff;
+    color: #697446;
+
+    .btn-line {
+      width: 60px;
+      background: #c9a96e;
+    }
   }
 }

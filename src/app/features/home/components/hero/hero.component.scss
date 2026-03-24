@@ -1,22 +1,28 @@
 .hero-section {
   position: relative;
   min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: center;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+
+  @media (max-width: 768px) {
+    background-attachment: scroll;
+  }
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    135deg,
-    rgba(26, 30, 15, 0.7) 0%,
-    rgba(58, 64, 35, 0.5) 50%,
-    rgba(26, 30, 15, 0.7) 100%
+    180deg,
+    rgba(26, 30, 15, 0.3) 0%,
+    rgba(26, 30, 15, 0.1) 30%,
+    rgba(26, 30, 15, 0.15) 70%,
+    rgba(26, 30, 15, 0.5) 100%
   );
 }
 
@@ -25,70 +31,116 @@
   z-index: 2;
   text-align: center;
   padding: 2rem;
-  animation: fadeInUp 1s ease;
+  animation: heroReveal 1.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .hero-logo {
-  width: 200px;
+  width: 140px;
   height: auto;
-  margin-bottom: 1.5rem;
-  filter: brightness(1.1);
+  margin-bottom: 2.5rem;
+  filter: brightness(1.2) drop-shadow(0 2px 20px rgba(0, 0, 0, 0.15));
   object-fit: contain;
 
   @media (max-width: 768px) {
-    width: 130px;
+    width: 100px;
+    margin-bottom: 2rem;
   }
 }
 
 .hero-title {
   color: #fff;
-  font-size: 3rem;
-  font-weight: 300;
-  letter-spacing: 4px;
+  font-family: 'Playfair Display', serif;
+  font-size: 4.5rem;
+  font-weight: 400;
+  letter-spacing: 8px;
   text-transform: uppercase;
-  margin-bottom: 0.5rem;
-  font-family: 'Eras Light', sans-serif;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+  text-shadow: 0 2px 40px rgba(0, 0, 0, 0.15);
 
-  @media (max-width: 768px) {
-    font-size: 1.8rem;
-    letter-spacing: 2px;
+  @media (max-width: 991px) {
+    font-size: 3rem;
+    letter-spacing: 5px;
   }
+
+  @media (max-width: 576px) {
+    font-size: 2rem;
+    letter-spacing: 3px;
+  }
+}
+
+.hero-divider {
+  width: 60px;
+  height: 1px;
+  background: #c9a96e;
+  margin: 0 auto 1.5rem;
+  animation: dividerExpand 1s 0.6s cubic-bezier(0.25, 1, 0.5, 1) both;
 }
 
 .hero-subtitle {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 1.1rem;
-  letter-spacing: 2px;
-  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.8rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-weight: 300;
 
-  @media (max-width: 768px) {
-    font-size: 0.9rem;
+  @media (max-width: 576px) {
+    font-size: 0.65rem;
+    letter-spacing: 3px;
   }
 }
 
-.hero-btn {
-  background: transparent;
-  border: 2px solid rgba(255, 255, 255, 0.5);
-  color: #fff;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+.hero-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2.5rem;
+}
+
+.hero-scroll {
+  background: none;
+  border: none;
   cursor: pointer;
-  font-size: 1.2rem;
-  transition: all 0.3s ease;
-  animation: bounce 2s infinite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  color: rgba(255, 255, 255, 0.5);
+  transition: color 0.4s;
 
   &:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: #fff;
-    transform: scale(1.1);
+    color: #c9a96e;
+
+    .scroll-line {
+      height: 50px;
+      background: #c9a96e;
+    }
+  }
+
+  .scroll-line {
+    width: 1px;
+    height: 35px;
+    background: rgba(255, 255, 255, 0.35);
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    animation: scrollPulse 2.5s ease-in-out infinite;
+  }
+
+  .scroll-text {
+    font-size: 0.6rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-weight: 300;
   }
 }
 
-@keyframes fadeInUp {
+@keyframes heroReveal {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(50px);
   }
   to {
     opacity: 1;
@@ -96,14 +148,18 @@
   }
 }
 
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
+@keyframes dividerExpand {
+  from {
+    width: 0;
+    opacity: 0;
   }
-  40% {
-    transform: translateY(-10px);
+  to {
+    width: 60px;
+    opacity: 1;
   }
-  60% {
-    transform: translateY(-5px);
-  }
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
 }

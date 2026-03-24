@@ -1,20 +1,18 @@
 @if (content(); as c) {
   <section id="current-project" class="current-project-section">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">{{ c.currentProject.title }}</h2>
-        <div class="title-divider"></div>
+    <div class="project-wrapper">
+      <div class="project-image">
+        <app-img [src]="c.currentProject.image" [alt]="c.currentProject.subtitle" />
       </div>
-      <div class="row align-items-center g-5">
-        <div class="col-lg-6">
-          <div class="project-image-wrapper">
-            <app-img [src]="c.currentProject.image" [alt]="c.currentProject.subtitle" />
-          </div>
+      <div class="project-info">
+        <div class="info-label">
+          <span class="label-text">En desarrollo</span>
+          <span class="label-line"></span>
         </div>
-        <div class="col-lg-6">
-          <h3 class="project-subtitle">{{ c.currentProject.subtitle }}</h3>
-          <p class="project-description">{{ c.currentProject.description }}</p>
-        </div>
+        <h2 class="project-title">{{ c.currentProject.title }}</h2>
+        <h3 class="project-subtitle">{{ c.currentProject.subtitle }}</h3>
+        <div class="project-divider"></div>
+        <p class="project-description">{{ c.currentProject.description }}</p>
       </div>
     </div>
   </section>

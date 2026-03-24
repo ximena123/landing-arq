@@ -1,32 +1,30 @@
 @if (content(); as c) {
   <section class="projects-hero">
-    <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h1>Proyectos de Diseño</h1>
-      <p>Explora nuestro portafolio de proyectos</p>
+      <div class="hero-label">
+        <span class="label-line"></span>
+        <span class="label-text">Portafolio</span>
+        <span class="label-line"></span>
+      </div>
+      <h1>Proyectos</h1>
     </div>
   </section>
 
-  <section class="projects-grid">
-    <div class="container">
-      <div class="row g-4">
-        @for (project of c.projects; track project.id) {
-          <div class="col-lg-4 col-md-6">
-            <a [routerLink]="['/proyecto', project.id]" class="project-card">
-              <div class="card-image">
-                <app-img [src]="project.thumbnail" [alt]="project.title" />
-                <div class="card-overlay">
-                  <span class="view-btn">Ver Proyecto</span>
-                </div>
-              </div>
-              <div class="card-info">
-                <h3>{{ project.title }}</h3>
-                <span class="year">{{ project.year }}</span>
-              </div>
-            </a>
+  <section class="projects-section">
+    <div class="projects-grid">
+      @for (project of c.projects; track project.id; let i = $index) {
+        <a [routerLink]="['/proyecto', project.id]"
+           class="project-item"
+           [class.project-item--tall]="i % 4 === 0 || i % 4 === 3">
+          <div class="project-img">
+            <app-img [src]="project.thumbnail" [alt]="project.title" />
           </div>
-        }
-      </div>
+          <div class="project-info">
+            <h3 class="project-name">{{ project.title }}</h3>
+            <span class="project-meta">{{ project.year }}</span>
+          </div>
+        </a>
+      }
     </div>
   </section>
 

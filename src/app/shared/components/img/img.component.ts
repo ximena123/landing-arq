@@ -40,7 +40,7 @@ export class ImgComponent {
           this.resolvedUrl.set(url || '');
         });
       } else {
-        this.resolvedUrl.set(value);
+        this.resolvedUrl.set(encodeURI(value));
       }
     });
   }

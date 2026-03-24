@@ -15,23 +15,24 @@ import { Component, HostListener, signal } from '@angular/core';
       position: fixed;
       bottom: 30px;
       right: 30px;
-      width: 45px;
-      height: 45px;
-      border: none;
-      border-radius: 50%;
-      background: #3A4023;
-      color: #fff;
-      font-size: 1.1rem;
+      width: 42px;
+      height: 42px;
+      border: 1px solid rgba(58, 64, 35, 0.15);
+      background: #fff;
+      color: #3A4023;
+      font-size: 0.8rem;
       cursor: pointer;
       z-index: 999;
-      transition: all 0.3s ease;
+      transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
 
       &:hover {
-        background: #697446;
+        background: #3A4023;
+        border-color: #3A4023;
+        color: #fff;
         transform: translateY(-3px);
       }
     }

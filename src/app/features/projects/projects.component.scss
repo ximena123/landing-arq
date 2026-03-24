@@ -1,117 +1,143 @@
 .projects-hero {
-  position: relative;
-  height: 40vh;
-  min-height: 280px;
+  height: 50vh;
+  min-height: 320px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url('/img/intro-bg.jpg') center / cover;
-
-  .hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(58, 64, 35, 0.85);
-  }
+  background: #3A4023;
+  position: relative;
 
   .hero-content {
-    position: relative;
-    z-index: 2;
     text-align: center;
     color: #fff;
 
     h1 {
-      font-size: 2.5rem;
-      font-weight: 300;
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      font-weight: 400;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+
+      @media (max-width: 768px) {
+        font-size: 2.2rem;
+        letter-spacing: 3px;
+      }
+    }
+  }
+
+  .hero-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+
+    .label-text {
+      font-size: 0.65rem;
       letter-spacing: 4px;
       text-transform: uppercase;
+      color: #c9a96e;
+      font-weight: 500;
     }
 
-    p {
-      color: rgba(255, 255, 255, 0.7);
-      font-size: 1rem;
-      letter-spacing: 1px;
+    .label-line {
+      width: 40px;
+      height: 1px;
+      background: #c9a96e;
+      opacity: 0.4;
     }
+  }
+}
+
+.projects-section {
+  padding: 5rem 8vw 8rem;
+  background: #fff;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  @media (max-width: 991px) {
+    padding: 4rem 5vw 6rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: 3rem 4vw 4rem;
   }
 }
 
 .projects-grid {
-  padding: 5rem 0;
-  background: #f5f5f0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem 3rem;
+  align-items: start;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
 }
 
-.project-card {
+.project-item {
   display: block;
   text-decoration: none;
-  border-radius: 12px;
+  color: inherit;
+
+  .project-img {
+    aspect-ratio: 4 / 3;
+  }
+
+  &--tall {
+    .project-img {
+      aspect-ratio: 3 / 4;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .project-img {
+      aspect-ratio: 4 / 3 !important;
+    }
+  }
+}
+
+.project-img {
   overflow: hidden;
-  background: #fff;
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
-  transition: all 0.4s ease;
+  width: 100%;
 
-  &:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
-
-    .card-overlay {
-      opacity: 1;
-    }
-
-    img {
-      transform: scale(1.05);
-    }
+  img,
+  ::ng-deep app-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
   }
 
-  .card-image {
-    position: relative;
-    overflow: hidden;
-    aspect-ratio: 16 / 10;
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s ease;
-    }
+  .project-item:hover & img,
+  .project-item:hover & ::ng-deep app-img img {
+    transform: scale(1.04);
   }
+}
 
-  .card-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(58, 64, 35, 0.6);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.3s;
+.project-info {
+  padding: 1rem 0;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
 
-    .view-btn {
-      color: #fff;
-      padding: 0.5rem 1.5rem;
-      border: 2px solid #fff;
-      border-radius: 25px;
-      font-size: 0.85rem;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-    }
-  }
+.project-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #3A4023;
+  margin: 0;
+  letter-spacing: 1px;
+}
 
-  .card-info {
-    padding: 1.2rem 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    h3 {
-      font-size: 1rem;
-      font-weight: 600;
-      color: #3A4023;
-      margin: 0;
-    }
-
-    .year {
-      font-size: 0.85rem;
-      color: #c9a96e;
-      font-weight: 500;
-    }
-  }
+.project-meta {
+  font-size: 0.65rem;
+  color: #c9a96e;
+  letter-spacing: 2px;
+  font-weight: 400;
+  flex-shrink: 0;
 }

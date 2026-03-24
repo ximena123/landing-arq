@@ -1,49 +1,44 @@
 @if (content(); as c) {
   <footer id="contact" class="footer-section">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-4 col-md-6 mb-4">
-          <h4 class="footer-title">Contacto</h4>
-          <ul class="footer-list">
-            <li>
-              <i class="fa-solid fa-location-dot"></i>
-              <span>{{ c.contact.location }}</span>
-            </li>
-            <li>
-              <i class="fa-solid fa-phone"></i>
-              <a [href]="'tel:' + c.contact.phone">{{ c.contact.phone }}</a>
-            </li>
-            <li>
-              <i class="fa-solid fa-envelope"></i>
-              <a [href]="'mailto:' + c.contact.email">{{ c.contact.email }}</a>
-            </li>
-          </ul>
+      <div class="footer-main">
+        <div class="footer-brand">
+          <img [src]="logoUrl()" alt="Logo" class="footer-logo" />
+          <p class="tagline">{{ c.contact.tagline }}</p>
         </div>
 
-        <div class="col-lg-4 col-md-6 mb-4">
-          <h4 class="footer-title">Redes Sociales</h4>
-          <div class="social-links">
-            <a [href]="c.contact.instagramUrl" target="_blank" rel="noopener" class="social-link instagram">
-              <i class="fa-brands fa-instagram"></i>
-              <span>{{ c.contact.instagram }}</span>
-            </a>
-            <a [href]="c.contact.linkedinUrl" target="_blank" rel="noopener" class="social-link linkedin">
-              <i class="fa-brands fa-linkedin-in"></i>
-              <span>{{ c.contact.linkedin }}</span>
-            </a>
+        <div class="footer-columns">
+          <div class="footer-col">
+            <h4 class="footer-title">Contacto</h4>
+            <ul class="footer-list">
+              <li>{{ c.contact.location }}</li>
+              <li>
+                <a [href]="'tel:' + c.contact.phone">{{ c.contact.phone }}</a>
+              </li>
+              <li>
+                <a [href]="'mailto:' + c.contact.email">{{ c.contact.email }}</a>
+              </li>
+            </ul>
           </div>
-        </div>
 
-        <div class="col-lg-4 col-md-12 mb-4">
-          <div class="footer-brand">
-            <img [src]="logoUrl()" alt="Logo" class="footer-logo" />
-            <p class="tagline">{{ c.contact.tagline }}</p>
+          <div class="footer-col">
+            <h4 class="footer-title">Síguenos</h4>
+            <div class="social-links">
+              <a [href]="c.contact.instagramUrl" target="_blank" rel="noopener" class="social-link">
+                <span class="social-name">Instagram</span>
+                <i class="fa-solid fa-arrow-up-right"></i>
+              </a>
+              <a [href]="c.contact.linkedinUrl" target="_blank" rel="noopener" class="social-link">
+                <span class="social-name">LinkedIn</span>
+                <i class="fa-solid fa-arrow-up-right"></i>
+              </a>
+            </div>
           </div>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; {{ currentYear }} Paola Stefany Puchaicela. Todos los derechos reservados.</p>
+        <p>&copy; {{ currentYear }} Paola Stefany Puchaicela</p>
         <a routerLink="/admin/login" class="admin-link" title="Administrar sitio">
           <i class="fa-solid fa-gear"></i>
         </a>

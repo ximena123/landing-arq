@@ -1,53 +1,104 @@
 .services-section {
-  padding: 6rem 0;
+  padding: 8rem 0 10rem;
   background: #f5f5f0;
+
+  @media (max-width: 768px) {
+    padding: 5rem 0 6rem;
+  }
 }
 
-.section-header {
+.services-header {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
+
+  @media (max-width: 768px) {
+    margin-bottom: 3rem;
+  }
 }
 
-.section-title {
-  font-size: 2.2rem;
-  font-weight: 300;
+.header-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+
+  .label-text {
+    font-size: 0.65rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #c9a96e;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  .label-line {
+    width: 40px;
+    height: 1px;
+    background: #c9a96e;
+    opacity: 0.4;
+  }
+}
+
+.services-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 400;
   color: #3A4023;
-  letter-spacing: 3px;
-  text-transform: uppercase;
+
+  @media (max-width: 768px) {
+    font-size: 2.2rem;
+  }
 }
 
-.title-divider {
-  width: 60px;
-  height: 3px;
-  background: #c9a96e;
-  margin: 1rem auto 0;
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+
+  @media (max-width: 991px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 576px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .service-card {
   position: relative;
-  border-radius: 12px;
   overflow: hidden;
-  height: 320px;
+  aspect-ratio: 1;
   cursor: pointer;
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  background: #fff;
 
   &:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-
     .service-bg {
       opacity: 1;
-      transform: scale(1.05);
+      transform: scale(1.08);
+    }
+
+    .service-overlay {
+      opacity: 1;
     }
 
     .service-content {
-      background: rgba(58, 64, 35, 0.85);
+      background: transparent;
     }
 
     .service-icon {
-      background: #c9a96e;
+      color: #c9a96e;
+      border-color: #c9a96e;
+    }
+
+    .service-title {
       color: #fff;
+    }
+
+    .service-desc {
+      color: rgba(255, 255, 255, 0.8);
+      opacity: 1;
+      transform: translateY(0);
     }
   }
 }
@@ -58,7 +109,16 @@
   background-size: cover;
   background-position: center;
   opacity: 0;
-  transition: all 0.5s ease;
+  transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.service-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(26, 30, 15, 0.7);
+  opacity: 0;
+  transition: opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  z-index: 1;
 }
 
 .service-content {
@@ -69,45 +129,45 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
+  padding: 2.5rem;
   text-align: center;
   background: #fff;
-  transition: background 0.4s ease;
+  transition: background 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .service-icon {
-  width: 65px;
-  height: 65px;
-  border-radius: 50%;
+  width: 50px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #f5f5f0;
+  border: 1px solid rgba(58, 64, 35, 0.2);
   color: #3A4023;
-  font-size: 1.5rem;
-  margin-bottom: 1.2rem;
-  transition: all 0.3s ease;
+  font-size: 1.1rem;
+  margin-bottom: 1.8rem;
+  transition: all 0.5s;
 }
 
 .service-title {
-  font-size: 1.15rem;
-  font-weight: 600;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 500;
   color: #3A4023;
-  margin-bottom: 0.8rem;
-  transition: color 0.3s;
-
-  .service-card:hover & {
-    color: #fff;
-  }
+  margin-bottom: 1rem;
+  transition: color 0.5s;
+  letter-spacing: 1px;
 }
 
 .service-desc {
-  font-size: 0.9rem;
-  color: #666;
-  line-height: 1.6;
-  transition: color 0.3s;
+  font-size: 0.82rem;
+  color: #888;
+  line-height: 1.9;
+  transition: all 0.5s;
+  opacity: 1;
+  transform: translateY(0);
 
   .service-card:hover & {
-    color: rgba(255, 255, 255, 0.85);
+    opacity: 1;
+    transform: translateY(0);
   }
 }

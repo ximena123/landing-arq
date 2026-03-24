@@ -1,55 +1,114 @@
 .current-project-section {
-  padding: 6rem 0;
   background: #fff;
-}
-
-.section-header {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-.section-title {
-  font-size: 2.2rem;
-  font-weight: 300;
-  color: #3A4023;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-}
-
-.title-divider {
-  width: 60px;
-  height: 3px;
-  background: #c9a96e;
-  margin: 1rem auto 0;
-}
-
-.project-image-wrapper {
-  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+}
+
+.project-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 600px;
+
+  @media (max-width: 991px) {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+}
+
+.project-image {
+  overflow: hidden;
+  position: relative;
 
   img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     display: block;
-    transition: transform 0.5s ease;
+    transition: transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+    min-height: 400px;
 
     &:hover {
-      transform: scale(1.03);
+      transform: scale(1.04);
+    }
+  }
+
+  @media (max-width: 991px) {
+    img {
+      min-height: 350px;
     }
   }
 }
 
-.project-subtitle {
-  font-size: 1.5rem;
+.project-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5rem;
+
+  @media (max-width: 1200px) {
+    padding: 4rem 3rem;
+  }
+
+  @media (max-width: 991px) {
+    padding: 3rem 2rem;
+  }
+}
+
+.info-label {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+
+  .label-text {
+    font-size: 0.65rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #c9a96e;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  .label-line {
+    flex: 1;
+    max-width: 60px;
+    height: 1px;
+    background: #c9a96e;
+    opacity: 0.4;
+  }
+}
+
+.project-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  font-weight: 400;
   color: #3A4023;
-  font-weight: 600;
-  margin-bottom: 1.2rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+}
+
+.project-subtitle {
+  font-size: 0.8rem;
+  color: #c9a96e;
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.project-divider {
+  width: 35px;
+  height: 1px;
+  background: #3A4023;
+  margin-bottom: 2rem;
+  opacity: 0.3;
 }
 
 .project-description {
-  font-size: 1rem;
-  line-height: 1.9;
-  color: #555;
-  text-align: justify;
+  font-size: 0.95rem;
+  line-height: 2.2;
+  color: #666;
 }

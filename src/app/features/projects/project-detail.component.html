@@ -1,30 +1,40 @@
 @if (project(); as p) {
-  <section class="detail-hero">
+  <section class="detail-hero" [style.background-image]="'url(' + (resolvedThumbnail() || p.thumbnail) + ')'">
     <div class="hero-overlay"></div>
     <div class="hero-content">
+      <span class="hero-year">{{ p.year }}</span>
       <h1>{{ p.title }}</h1>
-      <span class="year">{{ p.year }}</span>
+      <div class="hero-divider"></div>
     </div>
   </section>
 
-  <section class="detail-gallery">
+  <section class="detail-content">
     <div class="container">
-      <a routerLink="/proyectos" class="back-link">
-        <i class="fa-solid fa-arrow-left"></i> Volver a Proyectos
-      </a>
+      <div class="content-header">
+        <a routerLink="/proyectos" class="back-link">
+          <i class="fa-solid fa-arrow-left"></i>
+          <span>Volver a Proyectos</span>
+        </a>
+      </div>
 
       @if (p.description) {
-        <p class="project-description">{{ p.description }}</p>
+        <div class="description-wrapper">
+          <div class="description-label">
+            <span class="label-text">Sobre el proyecto</span>
+            <span class="label-line"></span>
+          </div>
+          <p class="project-description">{{ p.description }}</p>
+        </div>
       }
 
-      <div class="row g-3 mt-3">
+      <div class="gallery-grid">
         @for (image of p.images; track image.url) {
-          <div [class]="getColClass(image.cols)">
-            <div class="gallery-item" (click)="openLightbox(image.url)">
-              <app-img [src]="image.url" [alt]="image.alt" />
-              <div class="gallery-overlay">
-                <i class="fa-solid fa-expand"></i>
-              </div>
+          <div class="gallery-item"
+               [class.gallery-item--wide]="image.cols && image.cols >= 6"
+               (click)="openLightbox(image.url)">
+            <app-img [src]="image.url" [alt]="image.alt" />
+            <div class="gallery-hover">
+              <i class="fa-solid fa-expand"></i>
             </div>
           </div>
         }
@@ -45,6 +55,9 @@
 } @else {
   <div class="not-found">
     <h2>Proyecto no encontrado</h2>
-    <a routerLink="/proyectos">Volver a proyectos</a>
+    <a routerLink="/proyectos">
+      <i class="fa-solid fa-arrow-left"></i>
+      Volver a proyectos
+    </a>
   </div>
 }

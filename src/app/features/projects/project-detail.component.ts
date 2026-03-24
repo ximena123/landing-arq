@@ -18,10 +18,15 @@ export class ProjectDetailComponent {
   private imageStorage = inject(ImageStorageService);
 
   lightboxImage = signal<string | null>(null);
+  resolvedThumbnail = signal<string | null>(null);
 
   project = computed(() => {
     const id = this.route.snapshot.paramMap.get('id');
-    return this.contentService.content()?.projects.find(p => p.id === id) ?? null;
+    const p = this.contentService.content()?.projects.find(proj => proj.id === id) ?? null;
+    if (p?.thumbnail.startsWith('uploaded_')) {
+      this.imageStorage.getImageUrl(p.thumbnail).then(url => this.resolvedThumbnail.set(url));
+    }
+    return p;
   });
 
   async openLightbox(imageUrl: string): Promise<void> {

@@ -6,9 +6,13 @@
         <img [src]="logoUrl()" [alt]="c.hero.title" class="hero-logo" />
       }
       <h1 class="hero-title">{{ c.hero.title }}</h1>
+      <div class="hero-divider"></div>
       <p class="hero-subtitle">{{ c.hero.subtitle }}</p>
-      <button class="hero-btn" (click)="scrollToAbout()">
-        <i class="fa-solid fa-chevron-down"></i>
+    </div>
+    <div class="hero-bottom">
+      <button class="hero-scroll" (click)="scrollToAbout()">
+        <span class="scroll-line"></span>
+        <span class="scroll-text">Descubrir</span>
       </button>
     </div>
   </section>

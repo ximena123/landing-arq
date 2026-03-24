@@ -1,27 +1,32 @@
 @if (content(); as c) {
   <section id="portfolio" class="portfolio-section">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Portafolio</h2>
-        <div class="title-divider"></div>
+    <div class="container-fluid px-0">
+      <div class="portfolio-header">
+        <div class="header-label">
+          <span class="label-line"></span>
+          <span class="label-text">Proyectos</span>
+          <span class="label-line"></span>
+        </div>
+        <h2 class="portfolio-heading">Portafolio</h2>
       </div>
-      <div class="row g-4">
-        @for (item of c.portfolio; track item.id) {
-          <div class="col-md-6">
-            <a [routerLink]="['/proyecto', item.link]" class="portfolio-card">
-              <app-img [src]="item.image" [alt]="item.title" />
-              <div class="portfolio-overlay">
+      <div class="portfolio-grid">
+        @for (item of c.portfolio; track item.id; let i = $index) {
+          <div class="portfolio-card"
+               [class.portfolio-card--featured]="i === 0">
+            <app-img [src]="item.image" [alt]="item.title" />
+            <div class="portfolio-overlay">
+              <div class="portfolio-info">
                 <span class="portfolio-category">{{ item.category }}</span>
                 <h3 class="portfolio-title">{{ item.title }}</h3>
               </div>
-            </a>
+            </div>
           </div>
         }
       </div>
-      <div class="text-center mt-4">
+      <div class="portfolio-action">
         <a routerLink="/proyectos" class="btn-view-all">
-          Ver Todos los Proyectos
-          <i class="fa-solid fa-arrow-right ms-2"></i>
+          <span>Ver Todos los Proyectos</span>
+          <span class="btn-line"></span>
         </a>
       </div>
     </div>
