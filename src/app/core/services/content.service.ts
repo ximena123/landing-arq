@@ -15,8 +15,9 @@ export class ContentService {
 
   async loadContent(): Promise<void> {
     try {
+      const timestamp = new Date().getTime();
       const data = await firstValueFrom(
-        this.http.get<SiteContent>('data/content.json')
+        this.http.get<SiteContent>(`data/content.json?v=${timestamp}`)
       );
       this.contentSignal.set(data);
       localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
@@ -47,8 +48,9 @@ export class ContentService {
 
   async reloadFromFile(): Promise<void> {
     localStorage.removeItem(STORAGE_KEY);
+    const timestamp = new Date().getTime();
     const data = await firstValueFrom(
-      this.http.get<SiteContent>('data/content.json')
+      this.http.get<SiteContent>(`data/content.json?v=${timestamp}`)
     );
     this.contentSignal.set(data);
     localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
