@@ -55,9 +55,21 @@ export class AdminDashboardComponent {
 
       // Add uploaded images to zip and update paths in content
       const imgFolder = zip.folder('img/uploaded')!;
+      const usedFileNames = new Set<string>();
+
       for (const image of images) {
         const ext = this.getExtension(image.type);
-        const fileName = image.name || `${image.id}${ext}`;
+        let fileName = image.name || `${image.id}${ext}`;
+
+        // Avoid filename collisions by appending a unique suffix
+        if (usedFileNames.has(fileName)) {
+          const baseName = fileName.substring(0, fileName.lastIndexOf('.'));
+          const fileExt = fileName.substring(fileName.lastIndexOf('.'));
+          const timestamp = image.id.match(/uploaded_(\d+)/)?.[1] || Date.now().toString();
+          fileName = `${baseName}_${timestamp}${fileExt}`;
+        }
+        usedFileNames.add(fileName);
+
         imgFolder.file(fileName, image.data);
 
         // Replace all occurrences of the uploaded ID with the real path
